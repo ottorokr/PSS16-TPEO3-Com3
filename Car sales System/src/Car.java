@@ -37,6 +37,7 @@ public class Car implements java.io.Serializable
 	private int year;
 	private int price;
 	private double kilometers;
+	private Date lastService;
 
 	public Car(){}
 
@@ -90,6 +91,11 @@ public class Car implements java.io.Serializable
 	{
 		return year;
 	}
+	
+	public Date getLastService()
+	{
+		return lastService;
+	}
 
 	public void setInformation(String info)
 	{
@@ -120,4 +126,10 @@ public class Car implements java.io.Serializable
 	{
 		year = yr;
 	}
+	
+	public void setLastService(Date ls)
+	{
+		lastService = ls;
+	}
+
 }
