@@ -25,8 +25,8 @@ public class SearchByAgePanel extends JPanel implements ActionListener
 	private Car[] carList;
 	private CarSalesSystem carSystem;
 	private int currentIndex = 0;
-	private JLabel headingLabel = new JLabel("Búsqueda por edad");
-	private JLabel ageLabel = new JLabel("Edad del auto");
+	private JLabel headingLabel = new JLabel("Búsqueda por antigüedad");
+	private JLabel ageLabel = new JLabel("Antigüedad del auto");
 	private JButton searchButton = new JButton("Búsqueda");
 	private JButton resetButton = new JButton("Resetear");
 	private JButton previousButton = new JButton("Anterior");
