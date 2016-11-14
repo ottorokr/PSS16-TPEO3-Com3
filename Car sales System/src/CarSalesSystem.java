@@ -243,7 +243,7 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 				}
 				catch (java.io.IOException exp)
 				{
-					int result = JOptionPane.showConfirmDialog(this, "El archivo de datos no pudo ser escrito, posiblemente debido a que no tiene acceso a esta locación.\nSi elige No reintentar va a perder toda la informacion de los autos de esta sesión.\n\nQuisiera reintentar guardar el archivo de datos?", "Problema al guardar", JOptionPane.YES_NO_OPTION);
+					int result = JOptionPane.showConfirmDialog(this, "El archivo de datos no pudo ser escrito, posiblemente debido a que no tiene acceso a esta locación.\nSi elige No reintentar va a perder toda la informacion de los autos de esta sesión.\n\nDesea reintentar guardar el archivo de datos?", "Problema al guardar", JOptionPane.YES_NO_OPTION);
 
 					// checks if user wants to reattempt saving the data file
 					if (result == JOptionPane.YES_OPTION)
