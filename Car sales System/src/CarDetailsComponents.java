@@ -37,7 +37,7 @@ public class CarDetailsComponents extends JPanel implements ComponentListener
 	private JLabel yearLabel = new JLabel("Año");
 	private JLabel modelLabel = new JLabel("Modelo");
 	private JLabel priceLabel = new JLabel("Precio");
-	private JLabel kmLabel = new JLabel("Km recorridos");
+	private JLabel kmLabel = new JLabel("Kilometraje");
 	private JLabel infoLabel = new JLabel("Información extra");
 	private JTextField manufacturerTextField = new JTextField();
 	private JTextField yearTextField = new JTextField();
