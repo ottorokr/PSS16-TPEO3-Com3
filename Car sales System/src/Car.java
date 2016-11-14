@@ -46,11 +46,12 @@ public class Car implements java.io.Serializable
 	 * @param mod model name
 	 * @param info extra information about the car
 	 */
-	public Car(String man, String mod, String info)
+	public Car(String man, String mod, String info,Date d)
 	{
 		model = mod;
 		manufacturer = man.toUpperCase();
 		information = info;
+		lastService = d;
 	}
 
 	/**

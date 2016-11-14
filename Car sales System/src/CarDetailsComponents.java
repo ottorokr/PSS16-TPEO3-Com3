@@ -1,5 +1,10 @@
 import java.awt.*;
 import java.awt.event.*;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import javax.swing.*;
 /**
  * This class contais the group of text fields representing the cars information visually
@@ -39,11 +44,14 @@ public class CarDetailsComponents extends JPanel implements ComponentListener
 	private JLabel priceLabel = new JLabel("Price");
 	private JLabel kmLabel = new JLabel("Km Traveled");
 	private JLabel infoLabel = new JLabel("Extra Information");
+	private JLabel lastServiceLabel = new JLabel("Last Service (dd/MM/YYYY)");
 	private JTextField manufacturerTextField = new JTextField();
 	private JTextField yearTextField = new JTextField();
 	private JTextField modelTextField = new JTextField();
 	private JTextField priceTextField = new JTextField();
 	private JTextField kmTextField = new JTextField();
+	private DateFormat formateador = new SimpleDateFormat("dd/MM/yyyy");
+	private JFormattedTextField lastServiceField = new JFormattedTextField(formateador);
 	private JTextArea infoTextArea = new JTextArea(4, 0);
 
 	private final int divFactor = 27;
@@ -99,14 +107,23 @@ public class CarDetailsComponents extends JPanel implements ComponentListener
         gridBagConstraints.insets = currentInsets;
         compPanel.add(kmLabel, gridBagConstraints);
 
-        infoLabel.setFont(new Font(currentFont, Font.BOLD, 12));
+        lastServiceLabel.setFont(new Font(currentFont, Font.BOLD, 12));
         gridBagConstraints = new GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.anchor = GridBagConstraints.WEST;
         gridBagConstraints.insets = currentInsets;
+        compPanel.add(lastServiceLabel, gridBagConstraints);
+        
+        infoLabel.setFont(new Font(currentFont, Font.BOLD, 12));
+        gridBagConstraints = new GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.anchor = GridBagConstraints.WEST;
+        gridBagConstraints.insets = currentInsets;
         compPanel.add(infoLabel, gridBagConstraints);
 
+        
         gridBagConstraints = new GridBagConstraints();
         gridBagConstraints.gridwidth = GridBagConstraints.RELATIVE;
 		gridBagConstraints.anchor = GridBagConstraints.WEST;
@@ -144,12 +161,21 @@ public class CarDetailsComponents extends JPanel implements ComponentListener
 		gridBagConstraints.anchor = gridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
         compPanel.add(kmTextField, gridBagConstraints);
-
+        
+        gridBagConstraints = new GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridwidth = GridBagConstraints.RELATIVE;
+		gridBagConstraints.anchor = gridBagConstraints.WEST;
+        gridBagConstraints.weightx = 1.0;
+        lastServiceField.setColumns(20);
+        compPanel.add(lastServiceField, gridBagConstraints);
+        
 		infoTextArea.setLineWrap(true);
 		currentInsets = new Insets(2, 20, 0, 20);
         gridBagConstraints = new GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridy = 6;
         gridBagConstraints.anchor = gridBagConstraints.WEST;
 		gridBagConstraints.weightx = 1.0;
         compPanel.add(new JScrollPane(infoTextArea, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER), gridBagConstraints);
@@ -170,6 +196,7 @@ public class CarDetailsComponents extends JPanel implements ComponentListener
 		priceTextField.setText("");
 		kmTextField.setText("");
 		infoTextArea.setText("");
+		lastServiceField.setText("");
 	}
 
 	public void componentHidden(ComponentEvent ev) {}
@@ -216,6 +243,7 @@ public class CarDetailsComponents extends JPanel implements ComponentListener
 		priceTextField.setText(Integer.toString(c.getPrice()));
 		kmTextField.setText(Double.toString(c.getKilometers()));
 		infoTextArea.setText(c.getInformation());
+		lastServiceField.setText(c.getLastService().toString());
 	}
 
 	public String getInfoText()
@@ -246,6 +274,14 @@ public class CarDetailsComponents extends JPanel implements ComponentListener
 	public String getYearText()
 	{
 		return yearTextField.getText();
+	}
+	
+	public Date getLastService() throws ParseException
+	{
+		String sd = lastServiceField.getText();
+		Date d = new Date();
+		d = formateador.parse(sd);
+		return d;
 	}
 
 	/**

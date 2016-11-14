@@ -1,6 +1,8 @@
 import java.util.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.text.ParseException;
+
 import javax.swing.*;
 /**
  * The panel used for adding cars to the CarSalesSystem
@@ -78,6 +80,7 @@ public class AddCarPanel extends JPanel implements ActionListener
 		double kilometers = 0;
 		int price = 0;
 		int year = 0;
+		Date lastService = new Date();
 		boolean valid = false;
 		try
 		{
@@ -89,7 +92,8 @@ public class AddCarPanel extends JPanel implements ActionListener
 			kilometers = Double.parseDouble(carComponents.getKmText().trim());
 			price = Integer.parseInt(carComponents.getPriceText().trim());
 			year = Integer.parseInt(carComponents.getYearText().trim());
-
+			lastService = carComponents.getLastService();
+			
 			// begin validation process
 			if (validateString(manufacturer))
 			{
@@ -99,6 +103,7 @@ public class AddCarPanel extends JPanel implements ActionListener
 					{
 						if (validateKilometers(carComponents.getKmText().trim()))
 						{
+							
 							valid = true;
 						}
 						else
@@ -121,14 +126,22 @@ public class AddCarPanel extends JPanel implements ActionListener
 			JOptionPane.showMessageDialog(carSystem, "An unknown error has occured. Please ensure your fields meet the following requirements:\n" +
 			"The \"Year\" field must contain four numeric digits only\nThe \"Price\" field must contain a valid integer with no decimal places\nThe \"Km Traveled\" field must contain a number which can have a maximum of one decimal place", "Invalid field", JOptionPane.ERROR_MESSAGE);
 		}
+		/*
+		 * Se captura la excepcion por si el formato de la fecha no es válido
+		 */
+		catch(ParseException e){
+			JOptionPane.showMessageDialog(carSystem, "The format of the date is not valid", "Invalid field", JOptionPane.ERROR_MESSAGE);
+			
+		}
 
 		if (valid)
 		{
 			// create a car object from validated data.
-			Car myCar = new Car(manufacturer, model, info);
+			Car myCar = new Car(manufacturer, model, info,lastService);
 			myCar.setKilometers(kilometers);
 			myCar.setPrice(price);
 			myCar.setYear(year);
+			myCar.setLastService(lastService);
 
 			// attempt to add the new car to the system.
 			int result = carSystem.addNewCar(myCar);
