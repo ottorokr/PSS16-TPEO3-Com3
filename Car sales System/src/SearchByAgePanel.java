@@ -20,8 +20,7 @@ import javax.swing.*;
  */
 public class SearchByAgePanel extends JPanel implements ActionListener
 {
-	private final String[] age = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
-		"11-15", "16-20", "21-25", "26-30", "31+"};
+	private final String[] age = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10+"}; // <PSS-UNS> Saqué algunas edades porque eran muchas.
 	private Car[] carList;
 	private CarSalesSystem carSystem;
 	private int currentIndex = 0;
