@@ -91,7 +91,7 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 	private JMenuItem aboutItem = new JMenuItem(Language.getItemMenu3());
 	private JMenuItem LanguageMenu = new JMenu(Language.getItemMenu2()); 
 	private JMenuItem englishItem = new JMenuItem(Language.getIngles());
-	private JMenuItem espaniolItem = new JMenuItem(Language.getEspa�ol()); 
+	private JMenuItem espaniolItem = new JMenuItem(Language.getEspañol()); 
 	private JMenuItem exitItem = new JMenuItem(Language.getItemMenu4());
 	private WindowCloser closer = new WindowCloser();
 
@@ -125,12 +125,12 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 		catch (java.io.EOFException exp){}
 		catch (java.io.IOException exp)
 		{
-			System.out.println("El archivo de datos, 'cars.dat' posiblemente esta corrupto. Por favor elimine el archivo y cree uno nuevo vacÃ­o llamadocars.dat");
+			System.out.println("El archivo de datos, 'cars.dat' posiblemente esta corrupto. Por favor elimine el archivo y cree uno nuevo vacÃƒÂ­o llamadocars.dat");
 			System.exit(0);
 		}
 		catch (Exception exp)
 		{
-			System.out.println("Hubo un error cargando 'cars.dat'. Intente eliminÃ¡ndolo y creando un archivo nuevo vacio llamado 'cars.dat'");
+			System.out.println("Hubo un error cargando 'cars.dat'. Intente eliminÃƒÂ¡ndolo y creando un archivo nuevo vacio llamado 'cars.dat'");
 			System.exit(0);
 		}
 
@@ -144,8 +144,10 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 		theTab = new JTabbedPane(JTabbedPane.LEFT);
 		theTab.addChangeListener(this);
 		
+		carCoLabel = new JLabel(Language.getTitulo(), JLabel.CENTER);
 		String currentFont = carCoLabel.getFont().getName();
 		carCoLabel.setFont(new Font(currentFont, Font.BOLD, 26));
+		salesSysLabel = new JLabel(Language.getSubtitulo(), JLabel.CENTER);
 		salesSysLabel.setFont(new Font(currentFont, Font.PLAIN, 16));
 
 		// AGREGADO
@@ -206,6 +208,8 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 		Container c = getContentPane();
 		
 		c.remove(theTab);
+		
+		titlePanel.removeAll();
 	}
 
 	/**
