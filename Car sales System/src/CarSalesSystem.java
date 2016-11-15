@@ -83,13 +83,13 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 	private JPanel titlePanel = new JPanel(new GridLayout(2, 1));
 	private JLabel statusLabel = new JLabel();
 	private JLabel pictureLabel = new JLabel();
-	private JLabel carCoLabel = new JLabel("My Car Company", JLabel.CENTER);
-	private JLabel salesSysLabel = new JLabel("Car Sales System", JLabel.CENTER);
+	private JLabel carCoLabel = new JLabel("Mi Compañía de Autos", JLabel.CENTER);
+	private JLabel salesSysLabel = new JLabel("Sistema de Ventas de Autos", JLabel.CENTER);
 	private JTabbedPane theTab = new JTabbedPane(JTabbedPane.LEFT);
 	private JMenuBar menuBar = new JMenuBar();
-	private JMenu fileMenu = new JMenu("File");
-	private JMenuItem aboutItem = new JMenuItem("About");
-	private JMenuItem exitItem = new JMenuItem("Exit");
+	private JMenu fileMenu = new JMenu("Archivo");
+	private JMenuItem aboutItem = new JMenuItem("Acerca de");
+	private JMenuItem exitItem = new JMenuItem("Salir");
 	private WindowCloser closer = new WindowCloser();
 
 	/**
@@ -97,7 +97,7 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 	 */
 	public CarSalesSystem(String f)
 	{
-		super("Car Sales");
+		super("Ventas de Autos");
 
 		addWindowListener(closer);
 		addComponentListener(this);
@@ -116,19 +116,19 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 		}
 		catch (java.io.FileNotFoundException exp)
 		{
-			System.out.println("The data file, 'cars.dat' doesn't exist. Plase create an empty file named 'cars.dat'");
+			System.out.println("El archivo de datos, 'cars.dat' no existe. Por favor cree un archivo vacío llamado 'cars.dat'");
 			System.exit(0);
 		}
 		// empty cars.dat file, this error should be ignored
 		catch (java.io.EOFException exp){}
 		catch (java.io.IOException exp)
 		{
-			System.out.println("The data file, 'cars.dat' is possibly corrupted. Please delete it and create a new empty data file named cars.dat");
+			System.out.println("El archivo de datos, 'cars.dat' posiblemente está corrupto. Por favor elimine el archivo y cree uno nuevo vacío llamadocars.dat");
 			System.exit(0);
 		}
 		catch (Exception exp)
 		{
-			System.out.println("There was an error loading 'cars.dat'. Try deleting and creating a new empty file named 'cars.dat'");
+			System.out.println("Hubo un error cargando 'cars.dat'. Intente eliminándolo y creando un archivo nuevo vacío llamado 'cars.dat'");
 			System.exit(0);
 		}
 
@@ -162,11 +162,11 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 		SearchByAgePanel searchByAgePanel = new SearchByAgePanel(this);
 		SearchByOtherPanel searchByOtherPanel = new SearchByOtherPanel(this);
 
-		theTab.add("Welcome", welcomePanel);
-		theTab.add("Add a Car", addCarPanel);
-		theTab.add("Show all makes and models", showAllCarsPanel);
-		theTab.add("Search on age", searchByAgePanel);
-		theTab.add("Search on Price and Distance traveled", searchByOtherPanel);
+		theTab.add("Bienvenido", welcomePanel);
+		theTab.add("Agregar un auto", addCarPanel);
+		theTab.add("Mostrar todas las marcas y modelos", showAllCarsPanel);
+		theTab.add("Buscar por antigüedad", searchByAgePanel);
+		theTab.add("Buscar por precio y kilometraje", searchByOtherPanel);
 
 		theTab.addChangeListener(showAllCarsPanel);
 		theTab.addChangeListener(welcomePanel);
@@ -243,7 +243,7 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 				}
 				catch (java.io.IOException exp)
 				{
-					int result = JOptionPane.showConfirmDialog(this, "The data file could not be written, possibly because you don't have access to this location.\nIf you chose No to retry you will lose all car data from this session.\n\nWould you like to reattempt saving the data file?", "Problem saving data", JOptionPane.YES_NO_OPTION);
+					int result = JOptionPane.showConfirmDialog(this, "El archivo de datos no pudo ser escrito, posiblemente debido a que no tiene acceso a esta locación.\nSi elige No reintentar va a perder toda la informacion de los autos de esta sesión.\n\nDesea reintentar guardar el archivo de datos?", "Problema al guardar", JOptionPane.YES_NO_OPTION);
 
 					// checks if user wants to reattempt saving the data file
 					if (result == JOptionPane.YES_OPTION)

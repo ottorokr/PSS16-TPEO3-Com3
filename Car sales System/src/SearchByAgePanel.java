@@ -25,12 +25,12 @@ public class SearchByAgePanel extends JPanel implements ActionListener
 	private Car[] carList;
 	private CarSalesSystem carSystem;
 	private int currentIndex = 0;
-	private JLabel headingLabel = new JLabel("Search on age");
-	private JLabel ageLabel = new JLabel("Car Age");
-	private JButton searchButton = new JButton("Search");
-	private JButton resetButton = new JButton("Reset");
-	private JButton previousButton = new JButton("Previous");
-	private JButton nextButton = new JButton("Next");
+	private JLabel headingLabel = new JLabel("Búsqueda por antigüedad");
+	private JLabel ageLabel = new JLabel("Antigüedad del auto");
+	private JButton searchButton = new JButton("Búsqueda");
+	private JButton resetButton = new JButton("Resetear");
+	private JButton previousButton = new JButton("Anterior");
+	private JButton nextButton = new JButton("Siguiente");
 	private JComboBox ageCombo = new JComboBox(age);
 	private JPanel topPanel = new JPanel();
 	private JPanel agePanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
@@ -105,7 +105,7 @@ public class SearchByAgePanel extends JPanel implements ActionListener
 			carComponents.displayDetails(carList[currentIndex]);
 		}
 		else
-			JOptionPane.showMessageDialog(carSystem, "You can't navigate any further", "Alert", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(carSystem, "No puede navegar más", "Alerta", JOptionPane.ERROR_MESSAGE);
 	}
 
 	/**
@@ -119,7 +119,7 @@ public class SearchByAgePanel extends JPanel implements ActionListener
 			carComponents.displayDetails(carList[currentIndex]);
 		}
 		else
-			JOptionPane.showMessageDialog(carSystem, "You can't navigate any further", "Alert", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(carSystem, "No puede navegar más", "Alerta", JOptionPane.ERROR_MESSAGE);
 	}
 
 	/**
@@ -166,6 +166,6 @@ public class SearchByAgePanel extends JPanel implements ActionListener
 			carSystem.repaint();
 		}
 		else
-			JOptionPane.showMessageDialog(carSystem, "Sorry, no search results were returned", "Search failed", JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(carSystem, "Lo sentimos, no se han devuelto resultados de búsqueda.", "Error en la búsqueda", JOptionPane.WARNING_MESSAGE);
 	}
 }
