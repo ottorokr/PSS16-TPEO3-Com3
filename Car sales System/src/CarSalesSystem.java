@@ -165,7 +165,7 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 		theTab.add("Bienvenido", welcomePanel);
 		theTab.add("Agregar un auto", addCarPanel);
 		theTab.add("Mostrar todas las marcas y modelos", showAllCarsPanel);
-		theTab.add("Buscar por antigüedad", searchByAgePanel);
+		theTab.add("Buscar por antiguedad", searchByAgePanel);
 		theTab.add("Buscar por precio y kilometraje", searchByOtherPanel);
 
 		theTab.addChangeListener(showAllCarsPanel);

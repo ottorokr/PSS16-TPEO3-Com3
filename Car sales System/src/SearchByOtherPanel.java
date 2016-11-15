@@ -176,6 +176,6 @@ public class SearchByOtherPanel extends JPanel implements ActionListener
 			carSystem.repaint();
 		}
 		else
-			JOptionPane.showMessageDialog(carSystem, "Perdon, no hay resultados", "Falló la búsqueda", JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(carSystem, "Perdon, no hay resultados", "Fallo la busqueda", JOptionPane.WARNING_MESSAGE);
 	}
 }

@@ -34,19 +34,25 @@ import javax.swing.*;
 public class CarDetailsComponents extends JPanel implements ComponentListener
 {
 	private JLabel manufacturerLabel = new JLabel("Fabricante");
-	private JLabel yearLabel = new JLabel("AÃ±o");
-	private JLabel modelLabel = new JLabel("Modelo");
-	private JLabel priceLabel = new JLabel("Precio");
-	private JLabel kmLabel = new JLabel("Kilometraje");
-	private JLabel infoLabel = new JLabel("InformaciÃ³n extra");
 	private JTextField manufacturerTextField = new JTextField();
+	
+	private JLabel yearLabel = new JLabel("Año");
 	private JTextField yearTextField = new JTextField();
+	
+	private JLabel modelLabel = new JLabel("Modelo");
 	private JTextField modelTextField = new JTextField();
+	
+	private JLabel priceLabel = new JLabel("Precio");
 	private JTextField priceTextField = new JTextField();
+	
+	private JLabel kmLabel = new JLabel("Km recorridos");
 	private JTextField kmTextField = new JTextField();
-	private JTextArea infoTextArea = new JTextArea(4, 0);
-	private JLabel fotoLabel = new JLabel("Foto del Auto");
- 	private JTextField fotoTextField = new JTextField();
+	
+	private JLabel infoLabel = new JLabel("Informacion extra");	
+	private JTextArea infoTextArea = new JTextArea(4, 0);	
+
+	private JLabel fotoLabel = new JLabel("Foto del vehículo");
+	private JTextField fotoTextField = new JTextField();
 
 	private final int divFactor = 27;
 
@@ -56,7 +62,7 @@ public class CarDetailsComponents extends JPanel implements ComponentListener
 	 */
 	public CarDetailsComponents()
 	{
-		Insets currentInsets;
+		Insets currentInsets; 
 		GridBagConstraints gridBagConstraints;
 		setLayout(new BorderLayout(0, 20));
 		JPanel compPanel = new JPanel(new GridBagLayout());
@@ -100,6 +106,14 @@ public class CarDetailsComponents extends JPanel implements ComponentListener
         gridBagConstraints.anchor = GridBagConstraints.WEST;
         gridBagConstraints.insets = currentInsets;
         compPanel.add(kmLabel, gridBagConstraints);
+        
+        fotoLabel.setFont(new Font(currentFont, Font.BOLD, 12));
+        gridBagConstraints = new GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.anchor = GridBagConstraints.WEST;
+        gridBagConstraints.insets = currentInsets;
+        compPanel.add(fotoLabel, gridBagConstraints);
 
         infoLabel.setFont(new Font(currentFont, Font.BOLD, 12));
         gridBagConstraints = new GridBagConstraints();
@@ -146,14 +160,14 @@ public class CarDetailsComponents extends JPanel implements ComponentListener
 		gridBagConstraints.anchor = gridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
         compPanel.add(kmTextField, gridBagConstraints);
-	
-	 gridBagConstraints = new GridBagConstraints();
-         gridBagConstraints.gridx = 1;
-         gridBagConstraints.gridy = 5;
-         gridBagConstraints.gridwidth = GridBagConstraints.RELATIVE;
- 		gridBagConstraints.anchor = gridBagConstraints.WEST;
-         gridBagConstraints.weightx = 1.0;
-         compPanel.add(kmTextField, gridBagConstraints);
+        
+        gridBagConstraints = new GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridwidth = GridBagConstraints.RELATIVE;
+		gridBagConstraints.anchor = gridBagConstraints.WEST;
+        gridBagConstraints.weightx = 1.0;
+        compPanel.add(fotoTextField, gridBagConstraints);
 
 		infoTextArea.setLineWrap(true);
 		currentInsets = new Insets(2, 20, 0, 20);
@@ -163,15 +177,7 @@ public class CarDetailsComponents extends JPanel implements ComponentListener
         gridBagConstraints.anchor = gridBagConstraints.WEST;
 		gridBagConstraints.weightx = 1.0;
         compPanel.add(new JScrollPane(infoTextArea, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER), gridBagConstraints);
-	
-	fotoLabel.setFont(new Font(currentFont, Font.BOLD, 12));
-        gridBagConstraints = new GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.anchor = GridBagConstraints.WEST;
-        gridBagConstraints.insets = currentInsets;
-        compPanel.add(fotoLabel, gridBagConstraints);
-	
+
 		// this listens for resize events
 		addComponentListener(this);
         add(compPanel, "North");
@@ -187,6 +193,7 @@ public class CarDetailsComponents extends JPanel implements ComponentListener
 		modelTextField.setText("");
 		priceTextField.setText("");
 		kmTextField.setText("");
+		fotoTextField.setText("");
 		infoTextArea.setText("");
 	}
 
@@ -214,6 +221,7 @@ public class CarDetailsComponents extends JPanel implements ComponentListener
 				modelTextField.setColumns(width / divFactor);
 				priceTextField.setColumns(width / divFactor);
 				kmTextField.setColumns(width / divFactor);
+				fotoTextField.setColumns(width / divFactor);
 				infoTextArea.setColumns((width / divFactor) + 3); // this text box is larger
 			}
 		}
@@ -233,8 +241,8 @@ public class CarDetailsComponents extends JPanel implements ComponentListener
 		modelTextField.setText(c.getModel());
 		priceTextField.setText(Integer.toString(c.getPrice()));
 		kmTextField.setText(Double.toString(c.getKilometers()));
-		infoTextArea.setText(c.getInformation());
 		fotoTextField.setText(c.getPhoto());
+		infoTextArea.setText(c.getInformation());
 	}
 
 	public String getInfoText()
@@ -246,7 +254,7 @@ public class CarDetailsComponents extends JPanel implements ComponentListener
 	{
 		return kmTextField.getText();
 	}
-
+	
 	public String getManufacturerText()
 	{
 		return manufacturerTextField.getText();
@@ -266,11 +274,6 @@ public class CarDetailsComponents extends JPanel implements ComponentListener
 	{
 		return yearTextField.getText();
 	}
-	
-	public String getFotoText() {
-  		
-  		return fotoTextField.getText();
-  	}
 
 	/**
 	 * set focus to the manufacturer text field. ie, put the cursor inside it
@@ -279,4 +282,10 @@ public class CarDetailsComponents extends JPanel implements ComponentListener
 	{
 		manufacturerTextField.grabFocus();
 	}
+	
+	public String getFotoText() {
+		
+		return fotoTextField.getText();
+	}
+
 }
