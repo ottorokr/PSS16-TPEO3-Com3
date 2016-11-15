@@ -40,13 +40,13 @@ import javax.swing.*;
 public class CarDetailsComponents extends JPanel implements ComponentListener
 {
 
-	private JLabel manufacturerLabel = new JLabel("Manufacturer");
-	private JLabel yearLabel = new JLabel("Year");
-	private JLabel modelLabel = new JLabel("Model");
-	private JLabel priceLabel = new JLabel("Price");
-	private JLabel kmLabel = new JLabel("Km Traveled");
-	private JLabel infoLabel = new JLabel("Extra Information");
-	private JLabel lastServiceLabel = new JLabel("Last Service (dd/MM/yyyy)");
+	private JLabel manufacturerLabel = new JLabel(Languaje.getFabricante());
+	private JLabel yearLabel = new JLabel(Languaje.getAnio());
+	private JLabel modelLabel = new JLabel(Languaje.getModelo());
+	private JLabel priceLabel = new JLabel(Languaje.getPrecio());
+	private JLabel kmLabel = new JLabel(Languaje.getKM());
+	private JLabel infoLabel = new JLabel(Languaje.getInfoExtra());
+	private JLabel lastServiceLabel = new JLabel(Languaje.getUltimoServicio());
 	private JTextField manufacturerTextField = new JTextField();
 	
 	private JTextField yearTextField = new JTextField();
@@ -56,9 +56,9 @@ public class CarDetailsComponents extends JPanel implements ComponentListener
 	private DateFormat formateador = new SimpleDateFormat("dd/MM/yyyy");
 	private JFormattedTextField lastServiceField = new JFormattedTextField(formateador);
 	private JTextArea infoTextArea = new JTextArea(4, 0);
-	private JLabel fotoLabel = new JLabel("Foto del Auto");
+	private JLabel fotoLabel = new JLabel(Languaje.getFoto());
  	private JTextField fotoTextField = new JTextField();
-
+	
 	private final int divFactor = 27;
 
 	/**
