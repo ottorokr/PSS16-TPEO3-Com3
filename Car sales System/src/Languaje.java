@@ -448,7 +448,7 @@ public class Languaje {
 
 		switch (idioma) {
 		case Languaje.ENGLISH : mensaje = ". You will not receive any car update events"; break;
-		case Languaje.SPANISH : mensaje = ". No recibirás ningún evento de actualización de autos"; break;
+		case Languaje.SPANISH : mensaje = ". No recibiras ningun evento de actualizacion de autos"; break;
 		default : break;
 		}
 
@@ -461,7 +461,7 @@ public class Languaje {
 
 		switch (idioma) {
 		case Languaje.ENGLISH : mensaje = "Warning, the 'public carUpdated(CarEvent)' method couldn't be called for unknown reasons, You will not receive any car update events"; break;
-		case Languaje.SPANISH : mensaje = "Advertencia, el método 'public carUpdated(CarEvent)' no puedo ser llamado por razones desconocidas, No recibirás ningún evento de actualización de autos"; break;
+		case Languaje.SPANISH : mensaje = "Advertencia, el metodo 'public carUpdated(CarEvent)' no puedo ser llamado por razones desconocidas, No recibirás ningún evento de actualización de autos"; break;
 		default : break;
 		}
 
@@ -488,6 +488,19 @@ public class Languaje {
 		switch (idioma) {
 		case Languaje.ENGLISH : mensaje = "The data file could not be written, possibly because you don't have access to this location.\nIf you chose No to retry you will lose all car data from this session.\n\nWould you like to reattempt saving the data file?"; break;
 		case Languaje.SPANISH : mensaje = "El archivo de datos no pudo ser escrito, posiblemente debido a que no tiene acceso a esta locación.\nSi elige No reintentar va a perder toda la informacion de los autos de esta sesión.\n\nDesea reintentar guardar el archivo de datos?"; break;
+		default : break;
+		}
+
+		return mensaje;
+	}
+	
+	public static String getErrorDataFileTitulo () {
+
+		String mensaje = "";
+
+		switch (idioma) {
+		case Languaje.ENGLISH : mensaje = "Problem saving"; break;
+		case Languaje.SPANISH : mensaje = "Problema al guardar"; break;
 		default : break;
 		}
 
@@ -578,7 +591,7 @@ public class Languaje {
 
 		switch (idioma) {
 		case Languaje.ENGLISH : mensaje = "Search on age"; break;
-		case Languaje.SPANISH : mensaje = "Buscar por antigüedad"; break;
+		case Languaje.SPANISH : mensaje = "Buscar por antiguedad"; break;
 		default : break;
 		}
 

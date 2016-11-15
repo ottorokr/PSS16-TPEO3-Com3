@@ -185,11 +185,11 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 		SearchByAgePanel searchByAgePanel = new SearchByAgePanel(this);
 		SearchByOtherPanel searchByOtherPanel = new SearchByOtherPanel(this);
 
-		theTab.add("Welcome", welcomePanel);
-		theTab.add("Add a Car", addCarPanel);
+		theTab.add(Languaje.getPanel1(), welcomePanel);
+		theTab.add(Languaje.getPanel2(), addCarPanel);
 		theTab.add(Languaje.getPanel3(), showAllCarsPanel);
-		theTab.add("Search on age", searchByAgePanel);
-		theTab.add("Search on Price and Distance traveled", searchByOtherPanel);
+		theTab.add(Languaje.getPanel4(), searchByAgePanel);
+		theTab.add(Languaje.getPanel5(), searchByOtherPanel);
 
 		theTab.addChangeListener(showAllCarsPanel);
 		theTab.addChangeListener(welcomePanel);
@@ -215,7 +215,7 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 	{
 		// if it doesn't exist, create a new instance, otherwise display the current reference
 		if (aboutDlg == null)
-			aboutDlg = new AboutDialog(this, "About", true);
+			aboutDlg = new AboutDialog(this, Languaje.getItemMenu3(), true);
 		aboutDlg.showAbout();
 	}
 
@@ -283,7 +283,7 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 				}
 				catch (java.io.IOException exp)
 				{
-					int result = JOptionPane.showConfirmDialog(this, "El archivo de datos no pudo ser escrito, posiblemente debido a que no tiene acceso a esta locación.\nSi elige No reintentar va a perder toda la informacion de los autos de esta sesión.\n\nDesea reintentar guardar el archivo de datos?", "Problema al guardar", JOptionPane.YES_NO_OPTION);
+					int result = JOptionPane.showConfirmDialog(this, Languaje.getErrorDataFile(), Languaje.getErrorDataFileTitulo(), JOptionPane.YES_NO_OPTION);
 
 					// checks if user wants to reattempt saving the data file
 					if (result == JOptionPane.YES_OPTION)
@@ -504,7 +504,7 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 			}
 			catch (NoSuchMethodException exp)
 			{
-				System.out.println("Warning, 'public carsUpdated(CarEvent)' method does not exist in " + registeredListeners.get(i).getClass().getName() + ". You will not receive any car update events");
+				System.out.println(Languaje.getPrint4 ());
 			}
 			catch (IllegalAccessException exp)
 			{
