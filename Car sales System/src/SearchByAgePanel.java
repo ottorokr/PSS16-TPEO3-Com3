@@ -24,12 +24,12 @@ public class SearchByAgePanel extends JPanel implements ActionListener
 	private Car[] carList;
 	private CarSalesSystem carSystem;
 	private int currentIndex = 0;
-	private JLabel headingLabel = new JLabel(Languaje.getLabel1());
-	private JLabel ageLabel = new JLabel(Languaje.getLabel2());
-	private JButton searchButton = new JButton(Languaje.getLabel3());
-	private JButton resetButton = new JButton(Languaje.getLabel4());
-	private JButton previousButton = new JButton(Languaje.getLabel5());
-	private JButton nextButton = new JButton(Languaje.getLabel6());
+	private JLabel headingLabel = new JLabel(Language.getLabel1());
+	private JLabel ageLabel = new JLabel(Language.getLabel2());
+	private JButton searchButton = new JButton(Language.getLabel3());
+	private JButton resetButton = new JButton(Language.getLabel4());
+	private JButton previousButton = new JButton(Language.getLabel5());
+	private JButton nextButton = new JButton(Language.getLabel6());
 	private JComboBox ageCombo = new JComboBox(age);
 	private JPanel topPanel = new JPanel();
 	private JPanel agePanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
@@ -104,7 +104,7 @@ public class SearchByAgePanel extends JPanel implements ActionListener
 			carComponents.displayDetails(carList[currentIndex]);
 		}
 		else
-			JOptionPane.showMessageDialog(carSystem, Languaje.getErrorSearch1(), Languaje.getAlert(), JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(carSystem, Language.getErrorSearch1(), Language.getAlert(), JOptionPane.ERROR_MESSAGE);
 	}
 
 	/**
@@ -118,7 +118,7 @@ public class SearchByAgePanel extends JPanel implements ActionListener
 			carComponents.displayDetails(carList[currentIndex]);
 		}
 		else
-			JOptionPane.showMessageDialog(carSystem, Languaje.getErrorSearch1(), Languaje.getAlert(), JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(carSystem, Language.getErrorSearch1(), Language.getAlert(), JOptionPane.ERROR_MESSAGE);
 	}
 
 	/**
@@ -165,6 +165,6 @@ public class SearchByAgePanel extends JPanel implements ActionListener
 			carSystem.repaint();
 		}
 		else
-			JOptionPane.showMessageDialog(carSystem, Languaje.getErrorSearch2(), Languaje.getFailBusqueda(), JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(carSystem, Language.getErrorSearch2(), Language.getFailBusqueda(), JOptionPane.WARNING_MESSAGE);
 	}
 }

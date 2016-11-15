@@ -83,16 +83,16 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 	private JPanel titlePanel = new JPanel(new GridLayout(2, 1));
 	private JLabel statusLabel = new JLabel();
 	private JLabel pictureLabel = new JLabel();
-	private JLabel carCoLabel = new JLabel(Languaje.getTitulo(), JLabel.CENTER);
-	private JLabel salesSysLabel = new JLabel(Languaje.getSubtitulo(), JLabel.CENTER);
+	private JLabel carCoLabel = new JLabel(Language.getTitulo(), JLabel.CENTER);
+	private JLabel salesSysLabel = new JLabel(Language.getSubtitulo(), JLabel.CENTER);
 	private JTabbedPane theTab = new JTabbedPane(JTabbedPane.LEFT);
 	private JMenuBar menuBar = new JMenuBar();
-	private JMenu fileMenu = new JMenu(Languaje.getItemMenu1());
-	private JMenuItem aboutItem = new JMenuItem(Languaje.getItemMenu3());
-	private JMenuItem languajeMenu = new JMenu(Languaje.getItemMenu2()); 
-	private JMenuItem englishItem = new JMenuItem(Languaje.getIngles());
-	private JMenuItem espaniolItem = new JMenuItem(Languaje.getEspañol()); 
-	private JMenuItem exitItem = new JMenuItem(Languaje.getItemMenu4());
+	private JMenu fileMenu = new JMenu(Language.getItemMenu1());
+	private JMenuItem aboutItem = new JMenuItem(Language.getItemMenu3());
+	private JMenuItem LanguageMenu = new JMenu(Language.getItemMenu2()); 
+	private JMenuItem englishItem = new JMenuItem(Language.getIngles());
+	private JMenuItem espaniolItem = new JMenuItem(Language.getEspañol()); 
+	private JMenuItem exitItem = new JMenuItem(Language.getItemMenu4());
 	private WindowCloser closer = new WindowCloser();
 
 	/**
@@ -152,14 +152,14 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 		
 		// creo menu idioma
 		
-		languajeMenu.add(englishItem);  // agregado
-		languajeMenu.add(espaniolItem);  // agregado
+		LanguageMenu.add(englishItem);  // agregado
+		LanguageMenu.add(espaniolItem);  // agregado
 		
 		
 		// create menu bar
 		menuBar.add(fileMenu);
 		fileMenu.add(aboutItem);
-		fileMenu.add(languajeMenu); // agregado
+		fileMenu.add(LanguageMenu); // agregado
 		fileMenu.add(exitItem);
 		aboutItem.addActionListener(this);
 		englishItem.addActionListener(this); // agregado
@@ -185,11 +185,11 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 		SearchByAgePanel searchByAgePanel = new SearchByAgePanel(this);
 		SearchByOtherPanel searchByOtherPanel = new SearchByOtherPanel(this);
 
-		theTab.add(Languaje.getPanel1(), welcomePanel);
-		theTab.add(Languaje.getPanel2(), addCarPanel);
-		theTab.add(Languaje.getPanel3(), showAllCarsPanel);
-		theTab.add(Languaje.getPanel4(), searchByAgePanel);
-		theTab.add(Languaje.getPanel5(), searchByOtherPanel);
+		theTab.add(Language.getPanel1(), welcomePanel);
+		theTab.add(Language.getPanel2(), addCarPanel);
+		theTab.add(Language.getPanel3(), showAllCarsPanel);
+		theTab.add(Language.getPanel4(), searchByAgePanel);
+		theTab.add(Language.getPanel5(), searchByOtherPanel);
 
 		theTab.addChangeListener(showAllCarsPanel);
 		theTab.addChangeListener(welcomePanel);
@@ -215,7 +215,7 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 	{
 		// if it doesn't exist, create a new instance, otherwise display the current reference
 		if (aboutDlg == null)
-			aboutDlg = new AboutDialog(this, Languaje.getItemMenu3(), true);
+			aboutDlg = new AboutDialog(this, Language.getItemMenu3(), true);
 		aboutDlg.showAbout();
 	}
 
@@ -229,12 +229,12 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 		if (ev.getSource() == aboutItem)
 			aboutMenuItemClicked();
 		else if (ev.getSource() == englishItem) {
-			Languaje.setIdioma(Languaje.ENGLISH);
+			Language.setIdioma(Language.ENGLISH);
 			borrarGUI();
 			crearGUI();
 		}
 		else if (ev.getSource() == espaniolItem) {
-			Languaje.setIdioma(Languaje.SPANISH);
+			Language.setIdioma(Language.SPANISH);
 			borrarGUI();
 			crearGUI();
 		}
@@ -283,7 +283,7 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 				}
 				catch (java.io.IOException exp)
 				{
-					int result = JOptionPane.showConfirmDialog(this, Languaje.getErrorDataFile(), Languaje.getErrorDataFileTitulo(), JOptionPane.YES_NO_OPTION);
+					int result = JOptionPane.showConfirmDialog(this, Language.getErrorDataFile(), Language.getErrorDataFileTitulo(), JOptionPane.YES_NO_OPTION);
 
 					// checks if user wants to reattempt saving the data file
 					if (result == JOptionPane.YES_OPTION)
@@ -504,7 +504,7 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 			}
 			catch (NoSuchMethodException exp)
 			{
-				System.out.println(Languaje.getPrint4 ());
+				System.out.println(Language.getPrint4 ());
 			}
 			catch (IllegalAccessException exp)
 			{

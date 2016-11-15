@@ -24,9 +24,9 @@ import javax.swing.*;
 public class AddCarPanel extends JPanel implements ActionListener
 {
 	private CarSalesSystem carSystem;
-	private JLabel headingLabel = new JLabel(Languaje.getEtiquetaBtn1());
-	private JButton resetButton = new JButton(Languaje.getEtiquetaBtn2());
-	private JButton saveButton = new JButton(Languaje.getEtiquetaBtn3());
+	private JLabel headingLabel = new JLabel(Language.getEtiquetaBtn1());
+	private JButton resetButton = new JButton(Language.getEtiquetaBtn2());
+	private JButton saveButton = new JButton(Language.getEtiquetaBtn3());
 	private JPanel buttonPanel = new JPanel();
 	private CarDetailsComponents carComponents = new CarDetailsComponents();
 
@@ -110,33 +110,33 @@ public class AddCarPanel extends JPanel implements ActionListener
 
   					
 
-  								JOptionPane.showMessageDialog(carSystem, Languaje.getErrorFoto(), Languaje.getCampoInvalido(), JOptionPane.ERROR_MESSAGE);
+  								JOptionPane.showMessageDialog(carSystem, Language.getErrorFoto(), Language.getCampoInvalido(), JOptionPane.ERROR_MESSAGE);
   							
 						}
 						else
-							JOptionPane.showMessageDialog(carSystem, Languaje.getErrorKM(), Languaje.getCampoInvalido(), JOptionPane.ERROR_MESSAGE);
+							JOptionPane.showMessageDialog(carSystem, Language.getErrorKM(), Language.getCampoInvalido(), JOptionPane.ERROR_MESSAGE);
 					}
 					else
-						JOptionPane.showMessageDialog(carSystem, Languaje.getErrorModelo(), Languaje.getCampoInvalido(), JOptionPane.ERROR_MESSAGE);
+						JOptionPane.showMessageDialog(carSystem, Language.getErrorModelo(), Language.getCampoInvalido(), JOptionPane.ERROR_MESSAGE);
 				}
 				else
-					JOptionPane.showMessageDialog(carSystem, Languaje.getErrorAnio(), Languaje.getCampoInvalido(), JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(carSystem, Language.getErrorAnio(), Language.getCampoInvalido(), JOptionPane.ERROR_MESSAGE);
 			}
 			else
-				JOptionPane.showMessageDialog(carSystem, Languaje.getErrorFabricante(), Languaje.getCampoInvalido(), JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(carSystem, Language.getErrorFabricante(), Language.getCampoInvalido(), JOptionPane.ERROR_MESSAGE);
 
 		}
 		/* NumberFormatException would usually be thrown if the text fields contain invalid data,
 		for example a price field containing letters.*/
 		catch (NumberFormatException exp)
 		{
-			JOptionPane.showMessageDialog(carSystem, Languaje.getErrorDesconocido(), Languaje.getCampoInvalido(), JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(carSystem, Language.getErrorDesconocido(), Language.getCampoInvalido(), JOptionPane.ERROR_MESSAGE);
 		}
 		/*
 		 * Se captura la excepcion por si el formato de la fecha no es vÃ¡lido
 		 */
 		catch(ParseException e){
-			JOptionPane.showMessageDialog(carSystem, Languaje.getErrorFormatoFecha(), Languaje.getCampoInvalido(), JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(carSystem, Language.getErrorFormatoFecha(), Language.getCampoInvalido(), JOptionPane.ERROR_MESSAGE);
 
 		}
 
@@ -157,16 +157,16 @@ public class AddCarPanel extends JPanel implements ActionListener
 			if (result == CarsCollection.NO_ERROR)
 			{
 				carSystem.setCarsUpdated();
-				JOptionPane.showMessageDialog(carSystem, Languaje.getRegistroAgregado(), Languaje.getConfirmacion(), JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(carSystem, Language.getRegistroAgregado(), Language.getConfirmacion(), JOptionPane.INFORMATION_MESSAGE);
 				resetButtonClicked();
 				carComponents.setFocusManufacturerTextField();
 			}
 			// for that manufacturer, the limit has been reached
 			else if (result == CarsCollection.CARS_MAXIMUM_REACHED)
-				JOptionPane.showMessageDialog(carSystem, Languaje.getErrorAutos(), Languaje.getTituloProblemaAutos(), JOptionPane.WARNING_MESSAGE);
+				JOptionPane.showMessageDialog(carSystem, Language.getErrorAutos(), Language.getTituloProblemaAutos(), JOptionPane.WARNING_MESSAGE);
 			// the car system has reached the maximum number of manufacturers allowed
 			else if (result == CarsCollection.MANUFACTURERS_MAXIMUM_REACHED)
-				JOptionPane.showMessageDialog(carSystem, Languaje.getErrorFabricantes(), Languaje.getTituloProblemaAutos(), JOptionPane.WARNING_MESSAGE);
+				JOptionPane.showMessageDialog(carSystem, Language.getErrorFabricantes(), Language.getTituloProblemaAutos(), JOptionPane.WARNING_MESSAGE);
 		}
 	}
 

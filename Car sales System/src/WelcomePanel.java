@@ -24,7 +24,7 @@ import javax.swing.border.*;
 public class WelcomePanel extends JPanel implements ChangeListener
 {
 	private CarSalesSystem carSystem;
-	private JLabel headingLabel = new JLabel(Languaje.getMensajeBienvenido(), JLabel.CENTER);
+	private JLabel headingLabel = new JLabel(Language.getMensajeBienvenido(), JLabel.CENTER);
 	private JLabel carsLabel = new JLabel();
 	private JLabel manufacturersLabel = new JLabel();
 	private JLabel avgPriceLabel = new JLabel();
@@ -122,12 +122,12 @@ public class WelcomePanel extends JPanel implements ChangeListener
 		java.io.File f = new java.io.File(file);
 		long size = f.length(); // get length of binary data file
 
-		carsLabel.setText(Languaje.getCantAutos() + String.valueOf(cars));
-		manufacturersLabel.setText(Languaje.getCantFabricantes() + String.valueOf(manufacturers));
-		avgPriceLabel.setText(Languaje.getPrecioPromedio() + String.valueOf(avgPrice));
-		avgKmLabel.setText(Languaje.getKmPromedio() + String.valueOf(avgKm));
-		avgAgeLabel.setText(Languaje.getAntiguedad() + String.valueOf(avgAge));
-		versionLabel.setText(Languaje.getSistema() + CarSalesSystem.APP_VERSION);
-		dataSizeLabel.setText(Languaje.getTamanioDatos() + size + " bytes");
+		carsLabel.setText(Language.getCantAutos() + String.valueOf(cars));
+		manufacturersLabel.setText(Language.getCantFabricantes() + String.valueOf(manufacturers));
+		avgPriceLabel.setText(Language.getPrecioPromedio() + String.valueOf(avgPrice));
+		avgKmLabel.setText(Language.getKmPromedio() + String.valueOf(avgKm));
+		avgAgeLabel.setText(Language.getAntiguedad() + String.valueOf(avgAge));
+		versionLabel.setText(Language.getSistema() + CarSalesSystem.APP_VERSION);
+		dataSizeLabel.setText(Language.getTamanioDatos() + size + " bytes");
 	}
 }

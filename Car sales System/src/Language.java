@@ -1,5 +1,5 @@
 
-public class Languaje {
+public class Language {
 
 
 	private static int idioma = 0;
@@ -23,8 +23,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Cars Sales System for TPEO 3 - PSS 2016"; break;
-		case Languaje.SPANISH : mensaje = "Sistema de Venta de Autos para TPEO 3 - PSS 2016"; break;
+		case Language.ENGLISH : mensaje = "Cars Sales System for TPEO 3 - PSS 2016"; break;
+		case Language.SPANISH : mensaje = "Sistema de Venta de Autos para TPEO 3 - PSS 2016"; break;
 		default : break;
 		}
 
@@ -38,8 +38,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Add a Car"; break;
-		case Languaje.SPANISH : mensaje = "Agregar un auto"; break;
+		case Language.ENGLISH : mensaje = "Add a Car"; break;
+		case Language.SPANISH : mensaje = "Agregar un auto"; break;
 		default : break;
 		}
 
@@ -51,8 +51,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Reset"; break;
-		case Languaje.SPANISH : mensaje = "Reiniciar"; break;
+		case Language.ENGLISH : mensaje = "Reset"; break;
+		case Language.SPANISH : mensaje = "Reiniciar"; break;
 		default : break;
 		}
 
@@ -64,8 +64,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Save"; break;
-		case Languaje.SPANISH : mensaje = "Guardar"; break;
+		case Language.ENGLISH : mensaje = "Save"; break;
+		case Language.SPANISH : mensaje = "Guardar"; break;
 		default : break;
 		}
 
@@ -77,8 +77,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "An error has occured due to incorrect \"Km Traveled\" text field data.\nThis text field must contain a number with one decimal place only."; break;
-		case Languaje.SPANISH : mensaje = "Un error ha ocurrido debido a un valor incorrecto en el campo \"Kilometraje\".\nEste campo de texto debe contener un número con un solo decimal."; break;
+		case Language.ENGLISH : mensaje = "An error has occured due to incorrect \"Km Traveled\" text field data.\nThis text field must contain a number with one decimal place only."; break;
+		case Language.SPANISH : mensaje = "Un error ha ocurrido debido a un valor incorrecto en el campo \"Kilometraje\".\nEste campo de texto debe contener un número con un solo decimal."; break;
 		default : break;
 		}
 
@@ -90,8 +90,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "An error has occured due to incorrect \"Car's photo\" text field data.\nThis text field must contain a string with at least 6 characters differents to white spaces."; break;
-		case Languaje.SPANISH : mensaje = "Ocurrio un error debido a campos incorrectos en el campo\"Foto del vehiculo\".\nEste campo debe contener una cadena de al menos 6 caracteres que no sean espacios."; break;
+		case Language.ENGLISH : mensaje = "An error has occured due to incorrect \"Car's photo\" text field data.\nThis text field must contain a string with at least 6 characters differents to white spaces."; break;
+		case Language.SPANISH : mensaje = "Ocurrio un error debido a campos incorrectos en el campo\"Foto del vehiculo\".\nEste campo debe contener una cadena de al menos 6 caracteres que no sean espacios."; break;
 		default : break;
 		}
 
@@ -103,8 +103,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "An error has occured due to incorrect \"Model\" text field data.\nThis text field must contain any string of at least two non-spaced characters."; break;
-		case Languaje.SPANISH : mensaje = "Un error ha ocurrido debido a un valor incorrecto en el campo \"Modelo\".\nEste campo de texto debe contener cualquier cadena de al menos dos caracteres distintos del espacio."; break;
+		case Language.ENGLISH : mensaje = "An error has occured due to incorrect \"Model\" text field data.\nThis text field must contain any string of at least two non-spaced characters."; break;
+		case Language.SPANISH : mensaje = "Un error ha ocurrido debido a un valor incorrecto en el campo \"Modelo\".\nEste campo de texto debe contener cualquier cadena de al menos dos caracteres distintos del espacio."; break;
 		default : break;
 		}
 
@@ -116,8 +116,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "An error has occured due to incorrect \"Year\" text field data.\nThis text field must be in the form, YYYY. ie, 2007."; break;
-		case Languaje.SPANISH : mensaje = "Un error ha ocurrido debido a un valor incorrecto en el campo \"Año\".\nEste campo de texto debe estar en la forma, AAAA. Es decir, 2007."; break;
+		case Language.ENGLISH : mensaje = "An error has occured due to incorrect \"Year\" text field data.\nThis text field must be in the form, YYYY. ie, 2007."; break;
+		case Language.SPANISH : mensaje = "Un error ha ocurrido debido a un valor incorrecto en el campo \"Año\".\nEste campo de texto debe estar en la forma, AAAA. Es decir, 2007."; break;
 		default : break;
 		}
 
@@ -129,8 +129,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "An error has occured due to incorrect \"Manufacturer\" text field data.\nThis text field must contain any string of at least two non-spaced characters."; break;
-		case Languaje.SPANISH : mensaje = "Un error ha ocurrido debido a un valor incorrecto en el campo \"Fabricante\".\nEste campo de texto debe contener cualquier cadena de al menos dos caracteres distintos del espacio."; break;
+		case Language.ENGLISH : mensaje = "An error has occured due to incorrect \"Manufacturer\" text field data.\nThis text field must contain any string of at least two non-spaced characters."; break;
+		case Language.SPANISH : mensaje = "Un error ha ocurrido debido a un valor incorrecto en el campo \"Fabricante\".\nEste campo de texto debe contener cualquier cadena de al menos dos caracteres distintos del espacio."; break;
 		default : break;
 		}
 
@@ -142,9 +142,9 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "An unknown error has occured. Please ensure your fields meet the following requirements:\n" +
+		case Language.ENGLISH : mensaje = "An unknown error has occured. Please ensure your fields meet the following requirements:\n" +
 			"The \"Year\" field must contain four numeric digits only\nThe \"Price\" field must contain a valid integer with no decimal places\nThe \"Km Traveled\" field must contain a number which can have a maximum of one decimal place"; break;
-		case Languaje.SPANISH : mensaje = "Un error desconocido ha ocurrido. Por favor asegurate de que tus campos cumplan los siguientes requerimientos:\n" +
+		case Language.SPANISH : mensaje = "Un error desconocido ha ocurrido. Por favor asegurate de que tus campos cumplan los siguientes requerimientos:\n" +
 			"El campo \"Año\" debe contener solo cuatro dígitos numéricos\nEl campo \"Precio\" debe contener un entero válido sin decimales\nEl campo \"Kilometraje\" debe contener un número con un máximo de un decimal"; break;
 		default : break;
 		}
@@ -157,8 +157,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "The maximum amount of cars for that manufacturer has been reached.\nUnfortunately you cannot add any further cars to this manufacturer"; break;
-		case Languaje.SPANISH : mensaje = "El número máximo de autos para ese fabricante ha sido alcanzado.\nDesafortunadamente no puedes agregar más autos a este fabricante"; break;
+		case Language.ENGLISH : mensaje = "The maximum amount of cars for that manufacturer has been reached.\nUnfortunately you cannot add any further cars to this manufacturer"; break;
+		case Language.SPANISH : mensaje = "El número máximo de autos para ese fabricante ha sido alcanzado.\nDesafortunadamente no puedes agregar más autos a este fabricante"; break;
 		default : break;
 		}
 
@@ -170,8 +170,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "The maximum amount of manufacturers in the car system has been reached.\nUnfortunately you cannot add any further manufacturers to this system"; break;
-		case Languaje.SPANISH : mensaje = "El número máximo de fabricantes para el sistema de autos ha sido alcanzado.\nDesafortunadamente no puedes agregar más fabricantes a este sistema."; break;
+		case Language.ENGLISH : mensaje = "The maximum amount of manufacturers in the car system has been reached.\nUnfortunately you cannot add any further manufacturers to this system"; break;
+		case Language.SPANISH : mensaje = "El número máximo de fabricantes para el sistema de autos ha sido alcanzado.\nDesafortunadamente no puedes agregar más fabricantes a este sistema."; break;
 		default : break;
 		}
 
@@ -183,8 +183,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Invalid field"; break;
-		case Languaje.SPANISH : mensaje = "Campo inválido"; break;
+		case Language.ENGLISH : mensaje = "Invalid field"; break;
+		case Language.SPANISH : mensaje = "Campo inválido"; break;
 		default : break;
 		}
 
@@ -196,8 +196,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Confirmation"; break;
-		case Languaje.SPANISH : mensaje = "Confirmación"; break;
+		case Language.ENGLISH : mensaje = "Confirmation"; break;
+		case Language.SPANISH : mensaje = "Confirmación"; break;
 		default : break;
 		}
 
@@ -209,8 +209,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Problem adding car"; break;
-		case Languaje.SPANISH : mensaje = "Problema agregando auto"; break;
+		case Language.ENGLISH : mensaje = "Problem adding car"; break;
+		case Language.SPANISH : mensaje = "Problema agregando auto"; break;
 		default : break;
 		}
 
@@ -224,8 +224,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Year"; break;
-		case Languaje.SPANISH : mensaje = "Año"; break;
+		case Language.ENGLISH : mensaje = "Year"; break;
+		case Language.SPANISH : mensaje = "Año"; break;
 		default : break;
 		}
 
@@ -237,8 +237,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Ultimo servicio"; break;
-		case Languaje.SPANISH : mensaje = "Last Service"; break;
+		case Language.ENGLISH : mensaje = "Ultimo servicio"; break;
+		case Language.SPANISH : mensaje = "Last Service"; break;
 		default : break;
 		}
 
@@ -250,8 +250,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Model"; break;
-		case Languaje.SPANISH : mensaje = "Modelo"; break;
+		case Language.ENGLISH : mensaje = "Model"; break;
+		case Language.SPANISH : mensaje = "Modelo"; break;
 		default : break;
 		}
 
@@ -263,8 +263,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Price"; break;
-		case Languaje.SPANISH : mensaje = "Precio"; break;
+		case Language.ENGLISH : mensaje = "Price"; break;
+		case Language.SPANISH : mensaje = "Precio"; break;
 		default : break;
 		}
 
@@ -276,8 +276,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Km Traveled"; break;
-		case Languaje.SPANISH : mensaje = "Kilometraje"; break;
+		case Language.ENGLISH : mensaje = "Km Traveled"; break;
+		case Language.SPANISH : mensaje = "Kilometraje"; break;
 		default : break;
 		}
 
@@ -289,8 +289,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Extra Information"; break;
-		case Languaje.SPANISH : mensaje = "Información adicional"; break;
+		case Language.ENGLISH : mensaje = "Extra Information"; break;
+		case Language.SPANISH : mensaje = "Información adicional"; break;
 		default : break;
 		}
 
@@ -304,8 +304,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "My Car Company"; break;
-		case Languaje.SPANISH : mensaje = "Mi Compañía de Autos"; break;
+		case Language.ENGLISH : mensaje = "My Car Company"; break;
+		case Language.SPANISH : mensaje = "Mi Compañía de Autos"; break;
 		default : break;
 		}
 
@@ -317,8 +317,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Car Sales System"; break;
-		case Languaje.SPANISH : mensaje = "Sistema de Ventas de Autos"; break;
+		case Language.ENGLISH : mensaje = "Car Sales System"; break;
+		case Language.SPANISH : mensaje = "Sistema de Ventas de Autos"; break;
 		default : break;
 		}
 
@@ -330,8 +330,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "File"; break;
-		case Languaje.SPANISH : mensaje = "Archivo"; break;
+		case Language.ENGLISH : mensaje = "File"; break;
+		case Language.SPANISH : mensaje = "Archivo"; break;
 		default : break;
 		}
 
@@ -343,8 +343,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Languaje"; break;
-		case Languaje.SPANISH : mensaje = "Idioma"; break;
+		case Language.ENGLISH : mensaje = "Language"; break;
+		case Language.SPANISH : mensaje = "Idioma"; break;
 		default : break;
 		}
 
@@ -356,8 +356,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "About"; break;
-		case Languaje.SPANISH : mensaje = "Acerca de"; break;
+		case Language.ENGLISH : mensaje = "About"; break;
+		case Language.SPANISH : mensaje = "Acerca de"; break;
 		default : break;
 		}
 
@@ -369,8 +369,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Exit"; break;
-		case Languaje.SPANISH : mensaje = "Salir"; break;
+		case Language.ENGLISH : mensaje = "Exit"; break;
+		case Language.SPANISH : mensaje = "Salir"; break;
 		default : break;
 		}
 
@@ -382,8 +382,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Car Sales"; break;
-		case Languaje.SPANISH : mensaje = "Venta de autos"; break;
+		case Language.ENGLISH : mensaje = "Car Sales"; break;
+		case Language.SPANISH : mensaje = "Venta de autos"; break;
 		default : break;
 		}
 
@@ -395,8 +395,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "The data file, 'cars.dat' doesn't exist. Plase create an empty file named 'cars.dat'"; break;
-		case Languaje.SPANISH : mensaje = "El archivo de datos, 'cars.dat' no existe. Por favor cree un archivo vacío llamado 'cars.dat'"; break;
+		case Language.ENGLISH : mensaje = "The data file, 'cars.dat' doesn't exist. Plase create an empty file named 'cars.dat'"; break;
+		case Language.SPANISH : mensaje = "El archivo de datos, 'cars.dat' no existe. Por favor cree un archivo vacío llamado 'cars.dat'"; break;
 		default : break;
 		}
 
@@ -408,8 +408,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "The data file, 'cars.dat' is possibly corrupted. Please delete it and create a new empty data file named cars.dat"; break;
-		case Languaje.SPANISH : mensaje = "El archivo de datos, 'cars.dat' posiblemente está corrupto. Por favor elimine el archivo y cree uno nuevo vacío llamadocars.dat"; break;
+		case Language.ENGLISH : mensaje = "The data file, 'cars.dat' is possibly corrupted. Please delete it and create a new empty data file named cars.dat"; break;
+		case Language.SPANISH : mensaje = "El archivo de datos, 'cars.dat' posiblemente está corrupto. Por favor elimine el archivo y cree uno nuevo vacío llamadocars.dat"; break;
 		default : break;
 		}
 
@@ -421,8 +421,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "There was an error loading 'cars.dat'. Try deleting and creating a new empty file named 'cars.dat'"; break;
-		case Languaje.SPANISH : mensaje = "Hubo un error cargando 'cars.dat'. Intente eliminándolo y creando un archivo nuevo vacío llamado 'cars.dat'"; break;
+		case Language.ENGLISH : mensaje = "There was an error loading 'cars.dat'. Try deleting and creating a new empty file named 'cars.dat'"; break;
+		case Language.SPANISH : mensaje = "Hubo un error cargando 'cars.dat'. Intente eliminándolo y creando un archivo nuevo vacío llamado 'cars.dat'"; break;
 		default : break;
 		}
 
@@ -434,8 +434,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Warning, 'public carsUpdated(CarEvent)' method does not exist in "; break;
-		case Languaje.SPANISH : mensaje = "Advertencia, el método 'public carsUpdated(CarEvent)' no existe en "; break;
+		case Language.ENGLISH : mensaje = "Warning, 'public carsUpdated(CarEvent)' method does not exist in "; break;
+		case Language.SPANISH : mensaje = "Advertencia, el método 'public carsUpdated(CarEvent)' no existe en "; break;
 		default : break;
 		}
 
@@ -447,8 +447,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = ". You will not receive any car update events"; break;
-		case Languaje.SPANISH : mensaje = ". No recibiras ningun evento de actualizacion de autos"; break;
+		case Language.ENGLISH : mensaje = ". You will not receive any car update events"; break;
+		case Language.SPANISH : mensaje = ". No recibiras ningun evento de actualizacion de autos"; break;
 		default : break;
 		}
 
@@ -460,8 +460,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Warning, the 'public carUpdated(CarEvent)' method couldn't be called for unknown reasons, You will not receive any car update events"; break;
-		case Languaje.SPANISH : mensaje = "Advertencia, el metodo 'public carUpdated(CarEvent)' no puedo ser llamado por razones desconocidas, No recibirás ningún evento de actualización de autos"; break;
+		case Language.ENGLISH : mensaje = "Warning, the 'public carUpdated(CarEvent)' method couldn't be called for unknown reasons, You will not receive any car update events"; break;
+		case Language.SPANISH : mensaje = "Advertencia, el metodo 'public carUpdated(CarEvent)' no puedo ser llamado por razones desconocidas, No recibirás ningún evento de actualización de autos"; break;
 		default : break;
 		}
 
@@ -473,8 +473,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Current panel: "; break;
-		case Languaje.SPANISH : mensaje = "Panel actual: "; break;
+		case Language.ENGLISH : mensaje = "Current panel: "; break;
+		case Language.SPANISH : mensaje = "Panel actual: "; break;
 		default : break;
 		}
 
@@ -486,8 +486,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "The data file could not be written, possibly because you don't have access to this location.\nIf you chose No to retry you will lose all car data from this session.\n\nWould you like to reattempt saving the data file?"; break;
-		case Languaje.SPANISH : mensaje = "El archivo de datos no pudo ser escrito, posiblemente debido a que no tiene acceso a esta locación.\nSi elige No reintentar va a perder toda la informacion de los autos de esta sesión.\n\nDesea reintentar guardar el archivo de datos?"; break;
+		case Language.ENGLISH : mensaje = "The data file could not be written, possibly because you don't have access to this location.\nIf you chose No to retry you will lose all car data from this session.\n\nWould you like to reattempt saving the data file?"; break;
+		case Language.SPANISH : mensaje = "El archivo de datos no pudo ser escrito, posiblemente debido a que no tiene acceso a esta locación.\nSi elige No reintentar va a perder toda la informacion de los autos de esta sesión.\n\nDesea reintentar guardar el archivo de datos?"; break;
 		default : break;
 		}
 
@@ -499,8 +499,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Problem saving"; break;
-		case Languaje.SPANISH : mensaje = "Problema al guardar"; break;
+		case Language.ENGLISH : mensaje = "Problem saving"; break;
+		case Language.SPANISH : mensaje = "Problema al guardar"; break;
 		default : break;
 		}
 
@@ -512,8 +512,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Problem saving data"; break;
-		case Languaje.SPANISH : mensaje = "Problema guardando datos"; break;
+		case Language.ENGLISH : mensaje = "Problem saving data"; break;
+		case Language.SPANISH : mensaje = "Problema guardando datos"; break;
 		default : break;
 		}
 
@@ -525,8 +525,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "English"; break;
-		case Languaje.SPANISH : mensaje = "Ingles"; break;
+		case Language.ENGLISH : mensaje = "English"; break;
+		case Language.SPANISH : mensaje = "Ingles"; break;
 		default : break;
 		}
 
@@ -538,8 +538,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Spanish"; break;
-		case Languaje.SPANISH : mensaje = "Espa�ol"; break;
+		case Language.ENGLISH : mensaje = "Spanish"; break;
+		case Language.SPANISH : mensaje = "Espa�ol"; break;
 		default : break;
 		}
 
@@ -551,8 +551,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Welcome"; break;
-		case Languaje.SPANISH : mensaje = "Bienvenido"; break;
+		case Language.ENGLISH : mensaje = "Welcome"; break;
+		case Language.SPANISH : mensaje = "Bienvenido"; break;
 		default : break;
 		}
 
@@ -564,8 +564,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Add a Car"; break;
-		case Languaje.SPANISH : mensaje = "Agregar un auto"; break;
+		case Language.ENGLISH : mensaje = "Add a Car"; break;
+		case Language.SPANISH : mensaje = "Agregar un auto"; break;
 		default : break;
 		}
 
@@ -577,8 +577,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Show all makes and models"; break;
-		case Languaje.SPANISH : mensaje = "Mostrar todas las marcas y modelos"; break;
+		case Language.ENGLISH : mensaje = "Show all makes and models"; break;
+		case Language.SPANISH : mensaje = "Mostrar todas las marcas y modelos"; break;
 		default : break;
 		}
 
@@ -590,8 +590,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Search on age"; break;
-		case Languaje.SPANISH : mensaje = "Buscar por antiguedad"; break;
+		case Language.ENGLISH : mensaje = "Search on age"; break;
+		case Language.SPANISH : mensaje = "Buscar por antiguedad"; break;
 		default : break;
 		}
 
@@ -603,8 +603,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Search on Price and Distance traveled"; break;
-		case Languaje.SPANISH : mensaje = "Buscar por precio y kilometraje"; break;
+		case Language.ENGLISH : mensaje = "Search on Price and Distance traveled"; break;
+		case Language.SPANISH : mensaje = "Buscar por precio y kilometraje"; break;
 		default : break;
 		}
 
@@ -618,8 +618,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Search on age"; break;
-		case Languaje.SPANISH : mensaje = "Búsqueda por antigüedad"; break;
+		case Language.ENGLISH : mensaje = "Search on age"; break;
+		case Language.SPANISH : mensaje = "Búsqueda por antigüedad"; break;
 		default : break;
 		}
 
@@ -631,8 +631,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Car Age"; break;
-		case Languaje.SPANISH : mensaje = "Antigüedad del auto"; break;
+		case Language.ENGLISH : mensaje = "Car Age"; break;
+		case Language.SPANISH : mensaje = "Antigüedad del auto"; break;
 		default : break;
 		}
 
@@ -644,8 +644,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Search"; break;
-		case Languaje.SPANISH : mensaje = "Búsqueda"; break;
+		case Language.ENGLISH : mensaje = "Search"; break;
+		case Language.SPANISH : mensaje = "Búsqueda"; break;
 		default : break;
 		}
 
@@ -657,8 +657,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Reset"; break;
-		case Languaje.SPANISH : mensaje = "Reiniciar"; break;
+		case Language.ENGLISH : mensaje = "Reset"; break;
+		case Language.SPANISH : mensaje = "Reiniciar"; break;
 		default : break;
 		}
 
@@ -670,8 +670,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Previous"; break;
-		case Languaje.SPANISH : mensaje = "Anterior"; break;
+		case Language.ENGLISH : mensaje = "Previous"; break;
+		case Language.SPANISH : mensaje = "Anterior"; break;
 		default : break;
 		}
 
@@ -683,8 +683,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Next"; break;
-		case Languaje.SPANISH : mensaje = "Siguiente"; break;
+		case Language.ENGLISH : mensaje = "Next"; break;
+		case Language.SPANISH : mensaje = "Siguiente"; break;
 		default : break;
 		}
 
@@ -696,8 +696,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "You can't navigate any further"; break;
-		case Languaje.SPANISH : mensaje = "No puede navegar más"; break;
+		case Language.ENGLISH : mensaje = "You can't navigate any further"; break;
+		case Language.SPANISH : mensaje = "No puede navegar más"; break;
 		default : break;
 		}
 
@@ -709,8 +709,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Sorry, no search results were returned"; break;
-		case Languaje.SPANISH : mensaje = "Lo sentimos, no se han devuelto resultados de búsqueda."; break;
+		case Language.ENGLISH : mensaje = "Sorry, no search results were returned"; break;
+		case Language.SPANISH : mensaje = "Lo sentimos, no se han devuelto resultados de búsqueda."; break;
 		default : break;
 		}
 
@@ -722,8 +722,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Search failed"; break;
-		case Languaje.SPANISH : mensaje = "Error en la búsqueda"; break;
+		case Language.ENGLISH : mensaje = "Search failed"; break;
+		case Language.SPANISH : mensaje = "Error en la búsqueda"; break;
 		default : break;
 		}
 
@@ -735,8 +735,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Alert"; break;
-		case Languaje.SPANISH : mensaje = "Alerta"; break;
+		case Language.ENGLISH : mensaje = "Alert"; break;
+		case Language.SPANISH : mensaje = "Alerta"; break;
 		default : break;
 		}
 
@@ -752,8 +752,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Search on Price and Distance Traveled"; break;
-		case Languaje.SPANISH : mensaje = "Buscar por precio y kilometraje"; break;
+		case Language.ENGLISH : mensaje = "Search on Price and Distance Traveled"; break;
+		case Language.SPANISH : mensaje = "Buscar por precio y kilometraje"; break;
 		default : break;
 		}
 
@@ -766,8 +766,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Price"; break;
-		case Languaje.SPANISH : mensaje = "Precio"; break;
+		case Language.ENGLISH : mensaje = "Price"; break;
+		case Language.SPANISH : mensaje = "Precio"; break;
 		default : break;
 		}
 
@@ -779,8 +779,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Distance traveled"; break;
-		case Languaje.SPANISH : mensaje = "Kilometraje"; break;
+		case Language.ENGLISH : mensaje = "Distance traveled"; break;
+		case Language.SPANISH : mensaje = "Kilometraje"; break;
 		default : break;
 		}
 
@@ -796,8 +796,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Welcome to the Car Sales System"; break;
-		case Languaje.SPANISH : mensaje = "Bienvenido al Sistema de Venta de Autos"; break;
+		case Language.ENGLISH : mensaje = "Welcome to the Car Sales System"; break;
+		case Language.SPANISH : mensaje = "Bienvenido al Sistema de Venta de Autos"; break;
 		default : break;
 		}
 
@@ -809,8 +809,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Total number of cars: "; break;
-		case Languaje.SPANISH : mensaje = "Número total de autos: "; break;
+		case Language.ENGLISH : mensaje = "Total number of cars: "; break;
+		case Language.SPANISH : mensaje = "Número total de autos: "; break;
 		default : break;
 		}
 
@@ -822,8 +822,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Total number of manufacturers: "; break;
-		case Languaje.SPANISH : mensaje = "Número total de fabricantes: "; break;
+		case Language.ENGLISH : mensaje = "Total number of manufacturers: "; break;
+		case Language.SPANISH : mensaje = "Número total de fabricantes: "; break;
 		default : break;
 		}
 
@@ -835,8 +835,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Average car price: "; break;
-		case Languaje.SPANISH : mensaje = "Precio promedio del auto: "; break;
+		case Language.ENGLISH : mensaje = "Average car price: "; break;
+		case Language.SPANISH : mensaje = "Precio promedio del auto: "; break;
 		default : break;
 		}
 
@@ -848,8 +848,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Average car kilometers: "; break;
-		case Languaje.SPANISH : mensaje = "Kilometraje promedio: "; break;
+		case Language.ENGLISH : mensaje = "Average car kilometers: "; break;
+		case Language.SPANISH : mensaje = "Kilometraje promedio: "; break;
 		default : break;
 		}
 
@@ -861,8 +861,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Average car age: "; break;
-		case Languaje.SPANISH : mensaje = "Antiguedad promedio: "; break;
+		case Language.ENGLISH : mensaje = "Average car age: "; break;
+		case Language.SPANISH : mensaje = "Antiguedad promedio: "; break;
 		default : break;
 		}
 
@@ -874,8 +874,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Car Sales System, Version "; break;
-		case Languaje.SPANISH : mensaje = "Sistema de venta de autos, Versión "; break;
+		case Language.ENGLISH : mensaje = "Car Sales System, Version "; break;
+		case Language.SPANISH : mensaje = "Sistema de venta de autos, Versión "; break;
 		default : break;
 		}
 
@@ -887,8 +887,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Size of data file: "; break;
-		case Languaje.SPANISH : mensaje = "Tamaño del archivo: "; break;
+		case Language.ENGLISH : mensaje = "Size of data file: "; break;
+		case Language.SPANISH : mensaje = "Tamaño del archivo: "; break;
 		default : break;
 		}
 
@@ -900,8 +900,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "The format of the date is not valid"; break;
-		case Languaje.SPANISH : mensaje = "El formato de la fecha no es valido"; break;
+		case Language.ENGLISH : mensaje = "The format of the date is not valid"; break;
+		case Language.SPANISH : mensaje = "El formato de la fecha no es valido"; break;
 		default : break;
 		}
 
@@ -913,8 +913,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Manufacturer"; break;
-		case Languaje.SPANISH : mensaje = "Fabricante"; break;
+		case Language.ENGLISH : mensaje = "Manufacturer"; break;
+		case Language.SPANISH : mensaje = "Fabricante"; break;
 		default : break;
 		}
 
@@ -926,8 +926,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Car's photo"; break;
-		case Languaje.SPANISH : mensaje = "Foto del auto"; break;
+		case Language.ENGLISH : mensaje = "Car's photo"; break;
+		case Language.SPANISH : mensaje = "Foto del auto"; break;
 		default : break;
 		}
 
@@ -939,8 +939,8 @@ public class Languaje {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Languaje.ENGLISH : mensaje = "Record Added"; break;
-		case Languaje.SPANISH : mensaje = "Registro Agregado"; break;
+		case Language.ENGLISH : mensaje = "Record Added"; break;
+		case Language.SPANISH : mensaje = "Registro Agregado"; break;
 		default : break;
 		}
 

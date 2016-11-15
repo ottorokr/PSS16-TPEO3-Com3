@@ -27,13 +27,13 @@ public class SearchByOtherPanel extends JPanel implements ActionListener
 	private Car[] carList;
 	private CarSalesSystem carSystem;
 	private int currentIndex = 0;
-	private JLabel headingLabel = new JLabel(Languaje.getPanel5());
-	private JLabel priceLabel = new JLabel(Languaje.getBusqueda2());
-	private JLabel distanceLabel = new JLabel(Languaje.getBusqueda3());
-	private JButton searchButton = new JButton(Languaje.getLabel3());
-	private JButton resetButton = new JButton(Languaje.getEtiquetaBtn2());
-	private JButton previousButton = new JButton(Languaje.getLabel5());
-	private JButton nextButton = new JButton(Languaje.getLabel6());
+	private JLabel headingLabel = new JLabel(Language.getPanel5());
+	private JLabel priceLabel = new JLabel(Language.getBusqueda2());
+	private JLabel distanceLabel = new JLabel(Language.getBusqueda3());
+	private JButton searchButton = new JButton(Language.getLabel3());
+	private JButton resetButton = new JButton(Language.getEtiquetaBtn2());
+	private JButton previousButton = new JButton(Language.getLabel5());
+	private JButton nextButton = new JButton(Language.getLabel6());
 	private JComboBox priceCombo = new JComboBox(price);
 	private JComboBox distanceCombo = new JComboBox(distance);
 	private JPanel topPanel = new JPanel();
@@ -127,7 +127,7 @@ public class SearchByOtherPanel extends JPanel implements ActionListener
 			carComponents.displayDetails(carList[currentIndex]);
 		}
 		else
-			JOptionPane.showMessageDialog(carSystem, Languaje.getErrorSearch1(), Languaje.getAlert(), JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(carSystem, Language.getErrorSearch1(), Language.getAlert(), JOptionPane.ERROR_MESSAGE);
 	}
 
 	/**
@@ -176,6 +176,6 @@ public class SearchByOtherPanel extends JPanel implements ActionListener
 			carSystem.repaint();
 		}
 		else
-			JOptionPane.showMessageDialog(carSystem, Languaje.getErrorSearch2(), Languaje.getFailBusqueda(), JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(carSystem, Language.getErrorSearch2(), Language.getFailBusqueda(), JOptionPane.WARNING_MESSAGE);
 	}
 }
