@@ -868,5 +868,18 @@ public class Languaje {
 
 		return mensaje;
 	}
+	
+	public static String getRegistroAgregado () {
+
+		String mensaje = "";
+
+		switch (idioma) {
+		case Languaje.ENGLISH : mensaje = "Record Added"; break;
+		case Languaje.SPANISH : mensaje = "Registro Agregado"; break;
+		default : break;
+		}
+
+		return mensaje;
+	}
 
 }
