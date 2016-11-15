@@ -85,6 +85,19 @@ public class Languaje {
 		return mensaje;
 	}
 	
+	public static String getErrorFoto () {
+
+		String mensaje = "";
+
+		switch (idioma) {
+		case Languaje.ENGLISH : mensaje = "An error has occured due to incorrect \"Car's photo\" text field data.\nThis text field must contain a string with at least 6 characters differents to white spaces."; break;
+		case Languaje.SPANISH : mensaje = "Ocurrio un error debido a campos incorrectos en el campo\"Foto del vehiculo\".\nEste campo debe contener una cadena de al menos 6 caracteres que no sean espacios."; break;
+		default : break;
+		}
+
+		return mensaje;
+	}
+	
 	public static String getErrorModelo () {
 
 		String mensaje = "";
