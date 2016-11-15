@@ -217,6 +217,19 @@ public class Languaje {
 		return mensaje;
 	}
 	
+	public static String getTituloProblemaFabricante () {
+
+		String mensaje = "";
+
+		switch (idioma) {
+		case Languaje.ENGLISH : mensaje = "Problem adding manufacturer"; break;
+		case Languaje.SPANISH : mensaje = "Problema agregando fabricante"; break;
+		default : break;
+		}
+
+		return mensaje;
+	}
+	
 	// CarDetailsComponents
 	
 	public static String getAnio () {
