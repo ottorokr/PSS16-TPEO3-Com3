@@ -82,6 +82,7 @@ public class AddCarPanel extends JPanel implements ActionListener
 		int year = 0;
 		Date lastService = new Date();
 		boolean valid = false;
+		String photo = "";
 		try
 		{
 			/* retrieve all the values from the text field, and convert them into an appropriate
@@ -91,9 +92,8 @@ public class AddCarPanel extends JPanel implements ActionListener
 			info = carComponents.getInfoText().trim();
 			kilometers = Double.parseDouble(carComponents.getKmText().trim());
 			price = Integer.parseInt(carComponents.getPriceText().trim());
-			year = Integer.parseInt(carComponents.getYearText().trim());
-			lastService = carComponents.getLastService();
-			
+			year = Integer.parseInt(carComponents.getYearText().trim());lastService = carComponents.getLastService();
+			photo = carComponents.getFotoText();
 			// begin validation process
 			if (validateString(manufacturer))
 			{
@@ -103,8 +103,12 @@ public class AddCarPanel extends JPanel implements ActionListener
 					{
 						if (validateKilometers(carComponents.getKmText().trim()))
 						{
-							
-							valid = true;
+
+							if (validatePhoto(carComponents.getFotoText().trim()))
+  							   valid = true;
+  							else
+  								JOptionPane.showMessageDialog(carSystem, "Ocurrio un error debido a campos incorrectos en el campo  \"Foto del vehículo\".\nEste campo debe contener una cadena de al menos 6 caracteres que no sean espacios.", "Campo invalido", JOptionPane.ERROR_MESSAGE);
+  					
 						}
 						else
 							JOptionPane.showMessageDialog(carSystem, "Un error ha ocurrido debido a un valor incorrecto en el campo \"Kilometraje\".\nEste campo de texto debe contener un número con un solo decimal.", "Campo inválido", JOptionPane.ERROR_MESSAGE);
@@ -220,4 +224,20 @@ public class AddCarPanel extends JPanel implements ActionListener
 
 		return valid;
 	}
+	
+	private boolean validatePhoto(String arg)
+ 	{
+ 		boolean valid = false;
+ 		String[] splitted = arg.split(" "); // splits argument around spaces and creates an array
+ 
+ 		for (int i = 0; i < splitted.length; i++)
+  		{
+  			// checks if the number of characters between a space is greater than 2
+  			valid = (splitted[i].length() > 5);
+  			if (valid)
+  				break;
+  		}
+  
+  		return valid;
+  	}
 }

@@ -38,6 +38,7 @@ public class Car implements java.io.Serializable
 	private double price; // <PSS-UNS> antes era int.
 	private double kilometers;
 	private Date lastService;
+	private String photo;
 
 	public Car(){}
 
@@ -97,7 +98,9 @@ public class Car implements java.io.Serializable
 	{
 		return lastService;
 	}
-
+	public String getPhoto() {
+ 		return photo;
+ 	}
 	public void setInformation(String info)
 	{
 		information = info;
@@ -133,4 +136,7 @@ public class Car implements java.io.Serializable
 		lastService = ls;
 	}
 
+	public void setPhoto(String ph) {
+ 		photo = ph;
+ 	}
 }

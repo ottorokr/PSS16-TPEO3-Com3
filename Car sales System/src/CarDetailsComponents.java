@@ -55,6 +55,8 @@ public class CarDetailsComponents extends JPanel implements ComponentListener
 	private DateFormat formateador = new SimpleDateFormat("dd/MM/yyyy");
 	private JFormattedTextField lastServiceField = new JFormattedTextField(formateador);
 	private JTextArea infoTextArea = new JTextArea(4, 0);
+	private JLabel fotoLabel = new JLabel("Foto del Auto");
+ 	private JTextField fotoTextField = new JTextField();
 
 	private final int divFactor = 27;
 
@@ -116,11 +118,20 @@ public class CarDetailsComponents extends JPanel implements ComponentListener
         gridBagConstraints.anchor = GridBagConstraints.WEST;
         gridBagConstraints.insets = currentInsets;
         compPanel.add(lastServiceLabel, gridBagConstraints);
+
+	
+	fotoLabel.setFont(new Font(currentFont, Font.BOLD, 12));
+        gridBagConstraints = new GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.anchor = GridBagConstraints.WEST;
+        gridBagConstraints.insets = currentInsets;
+        compPanel.add(fotoLabel, gridBagConstraints);
         
         infoLabel.setFont(new Font(currentFont, Font.BOLD, 12));
         gridBagConstraints = new GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 6;
+        gridBagConstraints.gridy = 7;
         gridBagConstraints.anchor = GridBagConstraints.WEST;
         gridBagConstraints.insets = currentInsets;
         compPanel.add(infoLabel, gridBagConstraints);
@@ -173,15 +184,26 @@ public class CarDetailsComponents extends JPanel implements ComponentListener
         lastServiceField.setColumns(20);
         compPanel.add(lastServiceField, gridBagConstraints);
         
+	
+
+	 gridBagConstraints = new GridBagConstraints();
+         gridBagConstraints.gridx = 1;
+         gridBagConstraints.gridy = 6;
+         gridBagConstraints.gridwidth = GridBagConstraints.RELATIVE;
+ 		gridBagConstraints.anchor = gridBagConstraints.WEST;
+         gridBagConstraints.weightx = 1.0;
+         compPanel.add(kmTextField, gridBagConstraints);
+
 		infoTextArea.setLineWrap(true);
 		currentInsets = new Insets(2, 20, 0, 20);
         gridBagConstraints = new GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 6;
+        gridBagConstraints.gridy = 7;
         gridBagConstraints.anchor = gridBagConstraints.WEST;
 		gridBagConstraints.weightx = 1.0;
         compPanel.add(new JScrollPane(infoTextArea, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER), gridBagConstraints);
 
+	
 		// this listens for resize events
 		addComponentListener(this);
         add(compPanel, "North");
@@ -246,6 +268,7 @@ public class CarDetailsComponents extends JPanel implements ComponentListener
 		kmTextField.setText(Double.toString(c.getKilometers()));
 		infoTextArea.setText(c.getInformation());
 		lastServiceField.setText(c.getLastService().toString());
+		fotoTextField.setText(c.getPhoto());
 	}
 
 	public String getInfoText()
@@ -285,6 +308,10 @@ public class CarDetailsComponents extends JPanel implements ComponentListener
 		d = formateador.parse(sd);
 		return d;
 	}
+	public String getFotoText() {
+  		
+  		return fotoTextField.getText();
+  	}
 
 	/**
 	 * set focus to the manufacturer text field. ie, put the cursor inside it
