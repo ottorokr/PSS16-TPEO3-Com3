@@ -882,6 +882,19 @@ public class Languaje {
 		return mensaje;
 	}
 	
+	public static String getFoto () {
+
+		String mensaje = "";
+
+		switch (idioma) {
+		case Languaje.ENGLISH : mensaje = "Car's photo"; break;
+		case Languaje.SPANISH : mensaje = "Foto del auto"; break;
+		default : break;
+		}
+
+		return mensaje;
+	}
+	
 	public static String getRegistroAgregado () {
 
 		String mensaje = "";
