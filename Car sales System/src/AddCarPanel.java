@@ -131,7 +131,7 @@ public class AddCarPanel extends JPanel implements ActionListener
 		 */
 		catch(ParseException e){
 			JOptionPane.showMessageDialog(carSystem, "The format of the date is not valid", "Invalid field", JOptionPane.ERROR_MESSAGE);
-			
+
 		}
 
 		if (valid)
