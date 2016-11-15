@@ -83,7 +83,7 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 	private JPanel titlePanel = new JPanel(new GridLayout(2, 1));
 	private JLabel statusLabel = new JLabel();
 	private JLabel pictureLabel = new JLabel();
-	private JLabel carCoLabel = new JLabel("Mi Compañía de Autos", JLabel.CENTER);
+	private JLabel carCoLabel = new JLabel("Mi Compa�ia de Autos", JLabel.CENTER);
 	private JLabel salesSysLabel = new JLabel("Sistema de Ventas de Autos", JLabel.CENTER);
 	private JTabbedPane theTab = new JTabbedPane(JTabbedPane.LEFT);
 	private JMenuBar menuBar = new JMenuBar();
@@ -116,19 +116,19 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 		}
 		catch (java.io.FileNotFoundException exp)
 		{
-			System.out.println("El archivo de datos, 'cars.dat' no existe. Por favor cree un archivo vacío llamado 'cars.dat'");
+			System.out.println("El archivo de datos, 'cars.dat' no existe. Por favor cree un archivo vacio llamado 'cars.dat'");
 			System.exit(0);
 		}
 		// empty cars.dat file, this error should be ignored
 		catch (java.io.EOFException exp){}
 		catch (java.io.IOException exp)
 		{
-			System.out.println("El archivo de datos, 'cars.dat' posiblemente está corrupto. Por favor elimine el archivo y cree uno nuevo vacío llamadocars.dat");
+			System.out.println("El archivo de datos, 'cars.dat' posiblemente esta corrupto. Por favor elimine el archivo y cree uno nuevo vacío llamadocars.dat");
 			System.exit(0);
 		}
 		catch (Exception exp)
 		{
-			System.out.println("Hubo un error cargando 'cars.dat'. Intente eliminándolo y creando un archivo nuevo vacío llamado 'cars.dat'");
+			System.out.println("Hubo un error cargando 'cars.dat'. Intente eliminándolo y creando un archivo nuevo vacio llamado 'cars.dat'");
 			System.exit(0);
 		}
 

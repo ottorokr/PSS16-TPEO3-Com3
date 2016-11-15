@@ -136,6 +136,7 @@ public class AddCarPanel extends JPanel implements ActionListener
 			myCar.setKilometers(kilometers);
 			myCar.setPrice(price);
 			myCar.setYear(year);
+			myCar.setPhoto(photo);
 
 			// attempt to add the new car to the system.
 			int result = carSystem.addNewCar(myCar);
@@ -144,16 +145,16 @@ public class AddCarPanel extends JPanel implements ActionListener
 			if (result == CarsCollection.NO_ERROR)
 			{
 				carSystem.setCarsUpdated();
-				JOptionPane.showMessageDialog(carSystem, "Registro agregado", "Confirmaci√≥n", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(carSystem, "Registro agregado.", "Confirmacion", JOptionPane.INFORMATION_MESSAGE);
 				resetButtonClicked();
 				carComponents.setFocusManufacturerTextField();
 			}
 			// for that manufacturer, the limit has been reached
 			else if (result == CarsCollection.CARS_MAXIMUM_REACHED)
-				JOptionPane.showMessageDialog(carSystem, "El n√∫mero m√°ximo de autos para ese fabricante ha sido alcanzado.\nDesafortunadamente no puedes agregar m√°s autos a este fabricante", "Problema agregando auto", JOptionPane.WARNING_MESSAGE);
+				JOptionPane.showMessageDialog(carSystem, "La cantidad maxima de autos para ese fabricante fue alcanzado.\nDesafortunadamente no puedes aÒadir a ning˙n auto m·s para este fabricante", "Problema agregando auto", JOptionPane.WARNING_MESSAGE);
 			// the car system has reached the maximum number of manufacturers allowed
 			else if (result == CarsCollection.MANUFACTURERS_MAXIMUM_REACHED)
-				JOptionPane.showMessageDialog(carSystem, "El n√∫mero m√°ximo de fabricantes para el sistema de autos ha sido alcanzado.\nDesafortunadamente no puedes agregar m√°s fabricantes a este sistema.", "Problema agregando auto", JOptionPane.WARNING_MESSAGE);
+				JOptionPane.showMessageDialog(carSystem, "La cantidad m·xima de fabricantes en el sistema fue alcanzado.\nDesafortunadamente no puedes aÒadir a ning˙n fabricante m·s al sistema", "Problema agregando auto", JOptionPane.WARNING_MESSAGE);
 		}
 	}
 
