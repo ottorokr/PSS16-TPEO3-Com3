@@ -26,9 +26,9 @@ public class ShowAllCarsPanel extends JPanel implements ActionListener, ChangeLi
 	private CarSalesSystem carSystem;
 	private Car[] carList;
 	private int currentIndex = 0;
-	private JLabel headingLabel = new JLabel("Mostrar todas las marcas y modelos");
-	private JButton previousButton = new JButton("Volver");
-	private JButton nextButton = new JButton("Siguiente");
+	private JLabel headingLabel = new JLabel(Languaje.getPanel3());
+	private JButton previousButton = new JButton(Languaje.getLabel5());
+	private JButton nextButton = new JButton(Languaje.getLabel6());
 	private JPanel buttonPanel = new JPanel();
 	private CarDetailsComponents carComponents = new CarDetailsComponents();
 	private boolean carsUpdated = false;
@@ -131,7 +131,7 @@ public class ShowAllCarsPanel extends JPanel implements ActionListener, ChangeLi
 			carComponents.displayDetails(carList[currentIndex]);
 		}
 		else
-			JOptionPane.showMessageDialog(carSystem, "No podes seguir navegando", "Alerta", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(carSystem, Languaje.getErrorSearch1(), Languaje.getAlert(), JOptionPane.ERROR_MESSAGE);
 	}
 
 	/**
@@ -145,6 +145,6 @@ public class ShowAllCarsPanel extends JPanel implements ActionListener, ChangeLi
 			carComponents.displayDetails(carList[currentIndex]);
 		}
 		else
-			JOptionPane.showMessageDialog(carSystem, "No podes seguir navegando", "Alerta", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(carSystem, Languaje.getErrorSearch1(), Languaje.getAlert(), JOptionPane.ERROR_MESSAGE);
 	}
 }
