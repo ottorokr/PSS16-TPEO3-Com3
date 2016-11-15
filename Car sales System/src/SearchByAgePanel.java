@@ -20,16 +20,16 @@ import javax.swing.*;
  */
 public class SearchByAgePanel extends JPanel implements ActionListener
 {
-	private final String[] age = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10+"}; // <PSS-UNS> Saqué algunas edades porque eran muchas.
+	private final String[] age = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10+"}; // <PSS-UNS> SaquÃ© algunas edades porque eran muchas.
 	private Car[] carList;
 	private CarSalesSystem carSystem;
 	private int currentIndex = 0;
-	private JLabel headingLabel = new JLabel("Busqueda por antiguedad");
-	private JLabel ageLabel = new JLabel("Antiguedad del auto");
-	private JButton searchButton = new JButton("Busqueda");
-	private JButton resetButton = new JButton("Resetear");
-	private JButton previousButton = new JButton("Anterior");
-	private JButton nextButton = new JButton("Siguiente");
+	private JLabel headingLabel = new JLabel(Languaje.getLabel1());
+	private JLabel ageLabel = new JLabel(Languaje.getLabel2());
+	private JButton searchButton = new JButton(Languaje.getLabel3());
+	private JButton resetButton = new JButton(Languaje.getLabel4());
+	private JButton previousButton = new JButton(Languaje.getLabel5());
+	private JButton nextButton = new JButton(Languaje.getLabel6());
 	private JComboBox ageCombo = new JComboBox(age);
 	private JPanel topPanel = new JPanel();
 	private JPanel agePanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
@@ -104,7 +104,7 @@ public class SearchByAgePanel extends JPanel implements ActionListener
 			carComponents.displayDetails(carList[currentIndex]);
 		}
 		else
-			JOptionPane.showMessageDialog(carSystem, "No puede navegar mas", "Alerta", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(carSystem, Languaje.getErrorSearch1(), Languaje.getAlert(), JOptionPane.ERROR_MESSAGE);
 	}
 
 	/**
@@ -118,7 +118,7 @@ public class SearchByAgePanel extends JPanel implements ActionListener
 			carComponents.displayDetails(carList[currentIndex]);
 		}
 		else
-			JOptionPane.showMessageDialog(carSystem, "No puede navegar mas", "Alerta", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(carSystem, Languaje.getErrorSearch1(), Languaje.getAlert(), JOptionPane.ERROR_MESSAGE);
 	}
 
 	/**
@@ -165,6 +165,6 @@ public class SearchByAgePanel extends JPanel implements ActionListener
 			carSystem.repaint();
 		}
 		else
-			JOptionPane.showMessageDialog(carSystem, "Lo sentimos, no se han devuelto resultados de busqueda.", "Error en la busqueda", JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(carSystem, Languaje.getErrorSearch2(), Languaje.getFailBusqueda(), JOptionPane.WARNING_MESSAGE);
 	}
 }
