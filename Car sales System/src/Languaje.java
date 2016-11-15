@@ -842,5 +842,31 @@ public class Languaje {
 
 		return mensaje;
 	}
+	
+	public static String getErrorFormatoFecha () {
+
+		String mensaje = "";
+
+		switch (idioma) {
+		case Languaje.ENGLISH : mensaje = "The format of the date is not valid"; break;
+		case Languaje.SPANISH : mensaje = "El formato de la fecha no es valido"; break;
+		default : break;
+		}
+
+		return mensaje;
+	}
+	
+	public static String getFabricante () {
+
+		String mensaje = "";
+
+		switch (idioma) {
+		case Languaje.ENGLISH : mensaje = "Manufacturer"; break;
+		case Languaje.SPANISH : mensaje = "Fabricante"; break;
+		default : break;
+		}
+
+		return mensaje;
+	}
 
 }
