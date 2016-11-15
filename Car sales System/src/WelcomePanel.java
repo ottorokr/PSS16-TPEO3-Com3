@@ -122,12 +122,12 @@ public class WelcomePanel extends JPanel implements ChangeListener
 		java.io.File f = new java.io.File(file);
 		long size = f.length(); // get length of binary data file
 
-		carsLabel.setText("Número total de autos: " + String.valueOf(cars));
-		manufacturersLabel.setText("Número total de fabricantes: " + String.valueOf(manufacturers));
+		carsLabel.setText("Numero total de autos: " + String.valueOf(cars));
+		manufacturersLabel.setText("Numero total de fabricantes: " + String.valueOf(manufacturers));
 		avgPriceLabel.setText("Precio promedio del auto: " + String.valueOf(avgPrice));
 		avgKmLabel.setText("Kilometraje promedio: " + String.valueOf(avgKm));
 		avgAgeLabel.setText("Antiguedad promedio: " + String.valueOf(avgAge));
-		versionLabel.setText("Sistema de venta de autos, Versión " + CarSalesSystem.APP_VERSION);
-		dataSizeLabel.setText("Tamaño del archivo: " + size + " bytes");
+		versionLabel.setText("Sistema de venta de autos, Version " + CarSalesSystem.APP_VERSION);
+		dataSizeLabel.setText("Tama�o del archivo: " + size + " bytes");
 	}
 }

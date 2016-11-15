@@ -1,3 +1,4 @@
+
 import java.awt.*;
 import java.awt.event.*;
 import java.text.DateFormat;
@@ -221,6 +222,7 @@ public class CarDetailsComponents extends JPanel implements ComponentListener
 		kmTextField.setText("");
 		infoTextArea.setText("");
 		lastServiceField.setText("");
+		fotoTextField.setText("");
 	}
 
 	public void componentHidden(ComponentEvent ev) {}
@@ -248,6 +250,8 @@ public class CarDetailsComponents extends JPanel implements ComponentListener
 				priceTextField.setColumns(width / divFactor);
 				kmTextField.setColumns(width / divFactor);
 				infoTextArea.setColumns((width / divFactor) + 3); // this text box is larger
+				lastServiceField.setColumns(width /divFactor);
+				fotoTextField.setColumns(width / divFactor);
 			}
 		}
 	}

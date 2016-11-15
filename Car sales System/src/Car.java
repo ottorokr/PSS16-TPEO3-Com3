@@ -1,5 +1,5 @@
 import java.util.*;
-/**
+/** HOLA
  * Stores information about cars. Also calculates the cars age from the current date.
  * @
  *
@@ -14,7 +14,8 @@ import java.util.*;
  *    public String getInformation()
  *    public double getKilometers()
  *    public String getManufacturer()
- *    public String getModel()
+ *    public String getModel()    
+ *    public String getPhoto()
  *    public int getPrice()
  *    public int getYear()
  *    public void setInformation(String info)
