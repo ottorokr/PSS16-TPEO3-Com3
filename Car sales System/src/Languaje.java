@@ -232,6 +232,19 @@ public class Languaje {
 		return mensaje;
 	}
 	
+	public static String getUltimoServicio () {
+
+		String mensaje = "";
+
+		switch (idioma) {
+		case Languaje.ENGLISH : mensaje = "Ultimo servicio"; break;
+		case Languaje.SPANISH : mensaje = "Last Service"; break;
+		default : break;
+		}
+
+		return mensaje;
+	}
+	
 	public static String getModelo () {
 
 		String mensaje = "";
