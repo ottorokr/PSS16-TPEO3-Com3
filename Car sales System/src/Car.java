@@ -37,6 +37,7 @@ public class Car implements java.io.Serializable
 	private int year;
 	private int price;
 	private double kilometers;
+	private String photo;
 
 	public Car(){}
 
@@ -90,6 +91,10 @@ public class Car implements java.io.Serializable
 	{
 		return year;
 	}
+	
+	public String getPhoto() {
+ 		return photo;
+ 	}
 
 	public void setInformation(String info)
 	{
@@ -120,4 +125,8 @@ public class Car implements java.io.Serializable
 	{
 		year = yr;
 	}
+	
+	public void setPhoto(String ph) {
+ 		photo = ph;
+ 	}
 }
