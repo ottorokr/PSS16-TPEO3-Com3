@@ -89,6 +89,9 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 	private JMenuBar menuBar = new JMenuBar();
 	private JMenu fileMenu = new JMenu("Archivo");
 	private JMenuItem aboutItem = new JMenuItem("Acerca de");
+	private JMenuItem languajeMenu = new JMenu("Languaje"); // agregado
+	private JMenuItem englishItem = new JMenuItem("English"); // agregado
+	private JMenuItem espaniolItem = new JMenuItem("Español"); // agregado
 	private JMenuItem exitItem = new JMenuItem("Salir");
 	private WindowCloser closer = new WindowCloser();
 
@@ -105,7 +108,6 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 
 		setSize(780, 560);
 
-		Container c = getContentPane();
 		carCollection = new CarsCollection();
 
 		file = f;
@@ -132,15 +134,36 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 			System.exit(0);
 		}
 
+		crearGUI();
+		
+	}
+	
+		private void crearGUI () {
+		
+		Container c = getContentPane();
+		theTab = new JTabbedPane(JTabbedPane.LEFT);
+		
+		
 		String currentFont = carCoLabel.getFont().getName();
 		carCoLabel.setFont(new Font(currentFont, Font.BOLD, 26));
 		salesSysLabel.setFont(new Font(currentFont, Font.PLAIN, 16));
 
+		// AGREGADO
+		
+		// creo menu idioma
+		
+		languajeMenu.add(englishItem);  // agregado
+		languajeMenu.add(espaniolItem);  // agregado
+		
+		
 		// create menu bar
 		menuBar.add(fileMenu);
 		fileMenu.add(aboutItem);
+		fileMenu.add(languajeMenu); // agregado
 		fileMenu.add(exitItem);
 		aboutItem.addActionListener(this);
+		englishItem.addActionListener(this); // agregado
+		espaniolItem.addActionListener(this); // agregado
 		exitItem.addActionListener(this);
 
 		// add menu bar
@@ -156,17 +179,17 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 		topPanel.add(pictureLabel, "West");
 		topPanel.add(titlePanel, "Center");
 
-		WelcomePanel welcomePanel = new WelcomePanel(this, f);
+		WelcomePanel welcomePanel = new WelcomePanel(this, file);
 		AddCarPanel addCarPanel = new AddCarPanel(this);
 		ShowAllCarsPanel showAllCarsPanel = new ShowAllCarsPanel(this);
 		SearchByAgePanel searchByAgePanel = new SearchByAgePanel(this);
 		SearchByOtherPanel searchByOtherPanel = new SearchByOtherPanel(this);
 
-		theTab.add("Bienvenido", welcomePanel);
-		theTab.add("Agregar un auto", addCarPanel);
-		theTab.add("Mostrar todas las marcas y modelos", showAllCarsPanel);
-		theTab.add("Buscar por antiguedad", searchByAgePanel);
-		theTab.add("Buscar por precio y kilometraje", searchByOtherPanel);
+		theTab.add("Welcome", welcomePanel);
+		theTab.add("Add a Car", addCarPanel);
+		theTab.add(Languaje.getPanel3(), showAllCarsPanel);
+		theTab.add("Search on age", searchByAgePanel);
+		theTab.add("Search on Price and Distance traveled", searchByOtherPanel);
 
 		theTab.addChangeListener(showAllCarsPanel);
 		theTab.addChangeListener(welcomePanel);
@@ -177,6 +200,12 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 		c.add(topPanel, "North");
 		c.add(theTab, "Center");
 		c.add(statusLabel, "South");
+	}
+	
+	private void borrarGUI() {
+		Container c = getContentPane();
+		
+		theTab.removeAll();
 	}
 
 	/**
@@ -199,8 +228,19 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 	{
 		if (ev.getSource() == aboutItem)
 			aboutMenuItemClicked();
+		else if (ev.getSource() == englishItem) {
+			Languaje.setIdioma(Languaje.ENGLISH);
+			borrarGUI();
+			crearGUI();
+		}
+		else if (ev.getSource() == espaniolItem) {
+			Languaje.setIdioma(Languaje.SPANISH);
+			borrarGUI();
+			crearGUI();
+		}
 		else if (ev.getSource() == exitItem)
 			closing();
+			
 	}
 
 	/**
