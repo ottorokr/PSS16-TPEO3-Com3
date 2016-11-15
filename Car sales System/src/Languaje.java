@@ -507,6 +507,32 @@ public class Languaje {
 		return mensaje;
 	}
 	
+	public static String getIngles () {
+
+		String mensaje = "";
+
+		switch (idioma) {
+		case Languaje.ENGLISH : mensaje = "English"; break;
+		case Languaje.SPANISH : mensaje = "Ingles"; break;
+		default : break;
+		}
+
+		return mensaje;
+	}
+	
+	public static String getEspañol() {
+
+		String mensaje = "";
+
+		switch (idioma) {
+		case Languaje.ENGLISH : mensaje = "Spanish"; break;
+		case Languaje.SPANISH : mensaje = "Español"; break;
+		default : break;
+		}
+
+		return mensaje;
+	}
+	
 	public static String getPanel1 () {
 
 		String mensaje = "";

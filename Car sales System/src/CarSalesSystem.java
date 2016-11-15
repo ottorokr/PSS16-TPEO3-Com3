@@ -83,16 +83,16 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 	private JPanel titlePanel = new JPanel(new GridLayout(2, 1));
 	private JLabel statusLabel = new JLabel();
 	private JLabel pictureLabel = new JLabel();
-	private JLabel carCoLabel = new JLabel("Mi Compaï¿½ia de Autos", JLabel.CENTER);
-	private JLabel salesSysLabel = new JLabel("Sistema de Ventas de Autos", JLabel.CENTER);
+	private JLabel carCoLabel = new JLabel(Languaje.getTitulo(), JLabel.CENTER);
+	private JLabel salesSysLabel = new JLabel(Languaje.getSubtitulo(), JLabel.CENTER);
 	private JTabbedPane theTab = new JTabbedPane(JTabbedPane.LEFT);
 	private JMenuBar menuBar = new JMenuBar();
-	private JMenu fileMenu = new JMenu("Archivo");
-	private JMenuItem aboutItem = new JMenuItem("Acerca de");
-	private JMenuItem languajeMenu = new JMenu("Languaje"); // agregado
-	private JMenuItem englishItem = new JMenuItem("English"); // agregado
-	private JMenuItem espaniolItem = new JMenuItem("EspaÃ±ol"); // agregado
-	private JMenuItem exitItem = new JMenuItem("Salir");
+	private JMenu fileMenu = new JMenu(Languaje.getItemMenu1());
+	private JMenuItem aboutItem = new JMenuItem(Languaje.getItemMenu3());
+	private JMenuItem languajeMenu = new JMenu(Languaje.getItemMenu2()); 
+	private JMenuItem englishItem = new JMenuItem(Languaje.getIngles());
+	private JMenuItem espaniolItem = new JMenuItem(Languaje.getEspañol()); 
+	private JMenuItem exitItem = new JMenuItem(Languaje.getItemMenu4());
 	private WindowCloser closer = new WindowCloser();
 
 	/**
