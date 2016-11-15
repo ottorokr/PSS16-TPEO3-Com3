@@ -8,7 +8,7 @@ import java.util.Date;
 
 import javax.swing.*;
 /**
- * This class contais the group of text fields representing the cars information visually
+ * This class contains the group of text fields representing the cars information visually
  * inside a panel.
  * @
  *
@@ -31,11 +31,9 @@ import javax.swing.*;
  *    public String getPriceText()
  *    public String getYearText()
  *    public void setFocusManufacturerTextField()
+ *    public String getFotoText()
+ *    public Date getLastService() throws ParseException
  *
- * COLLABORATORS:
- *
- * @version 1.0, 16 Oct 2004
- * @author Adam Black
  */
 public class CarDetailsComponents extends JPanel implements ComponentListener
 {
@@ -174,6 +172,7 @@ public class CarDetailsComponents extends JPanel implements ComponentListener
         gridBagConstraints.gridwidth = GridBagConstraints.RELATIVE;
 		gridBagConstraints.anchor = gridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
+        kmTextField.setColumns(20);
         compPanel.add(kmTextField, gridBagConstraints);
         
         gridBagConstraints = new GridBagConstraints();
@@ -183,6 +182,7 @@ public class CarDetailsComponents extends JPanel implements ComponentListener
 		gridBagConstraints.anchor = gridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
         lastServiceField.setColumns(20);
+        lastServiceField.setText("dd/MM/AAAA");
         compPanel.add(lastServiceField, gridBagConstraints);
         
 	
@@ -193,7 +193,7 @@ public class CarDetailsComponents extends JPanel implements ComponentListener
          gridBagConstraints.gridwidth = GridBagConstraints.RELATIVE;
  		gridBagConstraints.anchor = gridBagConstraints.WEST;
          gridBagConstraints.weightx = 1.0;
-         compPanel.add(kmTextField, gridBagConstraints);
+         compPanel.add(fotoTextField, gridBagConstraints);
 
 		infoTextArea.setLineWrap(true);
 		currentInsets = new Insets(2, 20, 0, 20);

@@ -91,7 +91,7 @@ public class CarSalesSystem extends JFrame implements ActionListener, ComponentL
 	private JMenuItem aboutItem = new JMenuItem(Language.getItemMenu3());
 	private JMenuItem LanguageMenu = new JMenu(Language.getItemMenu2()); 
 	private JMenuItem englishItem = new JMenuItem(Language.getIngles());
-	private JMenuItem espaniolItem = new JMenuItem(Language.getEspañol()); 
+	private JMenuItem espaniolItem = new JMenuItem(Language.getEspaÃ±ol()); 
 	private JMenuItem exitItem = new JMenuItem(Language.getItemMenu4());
 	private WindowCloser closer = new WindowCloser();
 

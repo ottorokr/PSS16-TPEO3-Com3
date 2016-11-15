@@ -237,8 +237,8 @@ public class Language {
 		String mensaje = "";
 
 		switch (idioma) {
-		case Language.ENGLISH : mensaje = "Ultimo servicio"; break;
-		case Language.SPANISH : mensaje = "Last Service"; break;
+		case Language.ENGLISH : mensaje = "Last Service"; break;
+		case Language.SPANISH : mensaje = "Ultimo servicio"; break;
 		default : break;
 		}
 
@@ -533,13 +533,13 @@ public class Language {
 		return mensaje;
 	}
 	
-	public static String getEspañol() {
+	public static String getEspaÃ±ol() {
 
 		String mensaje = "";
 
 		switch (idioma) {
 		case Language.ENGLISH : mensaje = "Spanish"; break;
-		case Language.SPANISH : mensaje = "Español"; break;
+		case Language.SPANISH : mensaje = "Espaï¿½ol"; break;
 		default : break;
 		}
 
