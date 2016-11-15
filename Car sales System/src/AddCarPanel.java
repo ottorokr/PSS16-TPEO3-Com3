@@ -24,9 +24,9 @@ import javax.swing.*;
 public class AddCarPanel extends JPanel implements ActionListener
 {
 	private CarSalesSystem carSystem;
-	private JLabel headingLabel = new JLabel("Agregar un auto");
-	private JButton resetButton = new JButton("Reiniciar");
-	private JButton saveButton = new JButton("Guardar");
+	private JLabel headingLabel = new JLabel(Languaje.getEtiquetaBtn1());
+	private JButton resetButton = new JButton(Languaje.getEtiquetaBtn2());
+	private JButton saveButton = new JButton(Languaje.getEtiquetaBtn3());
 	private JPanel buttonPanel = new JPanel();
 	private CarDetailsComponents carComponents = new CarDetailsComponents();
 
@@ -110,34 +110,33 @@ public class AddCarPanel extends JPanel implements ActionListener
 
   					
 
-  								JOptionPane.showMessageDialog(carSystem, "Ocurrio un error debido a campos incorrectos en el campo  \"Foto del vehiculo\".\nEste campo debe contener una cadena de al menos 6 caracteres que no sean espacios.", "Campo invalido", JOptionPane.ERROR_MESSAGE);
+  								JOptionPane.showMessageDialog(carSystem, Languaje.getErrorFoto(), Languaje.getCampoInvalido(), JOptionPane.ERROR_MESSAGE);
   							
 						}
 						else
-							JOptionPane.showMessageDialog(carSystem, "Un error ha ocurrido debido a un valor incorrecto en el campo \"Kilometraje\".\nEste campo de texto debe contener un numero con un solo decimal.", "Campo invalido", JOptionPane.ERROR_MESSAGE);
+							JOptionPane.showMessageDialog(carSystem, Languaje.getErrorKM(), Languaje.getCampoInvalido(), JOptionPane.ERROR_MESSAGE);
 					}
 					else
-						JOptionPane.showMessageDialog(carSystem, "Un error ha ocurrido debido a un valor incorrecto en el campo \"Modelo\".\nEste campo de texto debe contener cualquier cadena de al menos dos caracteres distintos del espacio.", "Campo invalido", JOptionPane.ERROR_MESSAGE);
+						JOptionPane.showMessageDialog(carSystem, Languaje.getErrorModelo(), Languaje.getCampoInvalido(), JOptionPane.ERROR_MESSAGE);
 				}
 				else
-					JOptionPane.showMessageDialog(carSystem, "Un error ha ocurrido debido a un valor incorrecto en el campo \"Año\".\nEste campo de texto debe estar en la forma, AAAA. Es decir, 2007.", "Campo invalido", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(carSystem, Languaje.getErrorAnio(), Languaje.getCampoInvalido(), JOptionPane.ERROR_MESSAGE);
 			}
 			else
-				JOptionPane.showMessageDialog(carSystem, "Un error ha ocurrido debido a un valor incorrecto en el campo \"Fabricante\".\nEste campo de texto debe contener cualquier cadena de al menos dos caracteres distintos del espacio.", "Campo invalido", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(carSystem, Languaje.getErrorFabricante(), Languaje.getCampoInvalido(), JOptionPane.ERROR_MESSAGE);
 
 		}
 		/* NumberFormatException would usually be thrown if the text fields contain invalid data,
 		for example a price field containing letters.*/
 		catch (NumberFormatException exp)
 		{
-			JOptionPane.showMessageDialog(carSystem, "Un error desconocido ha ocurrido. Por favor asegurate de que tus campos cumplan los siguientes requerimientos:\n" +
-			"El campo \"Año\" debe contener solo cuatro digitos numericos\nEl campo \"Precio\" debe contener un entero valido sin decimales\nEl campo \"Kilometraje\" debe contener un numero con un maximo de un decimal", "Campo invalido", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(carSystem, Languaje.getErrorDesconocido(), Languaje.getCampoInvalido(), JOptionPane.ERROR_MESSAGE);
 		}
 		/*
-		 * Se captura la excepcion por si el formato de la fecha no es vÃ¡lido
+		 * Se captura la excepcion por si el formato de la fecha no es vÃƒÂ¡lido
 		 */
 		catch(ParseException e){
-			JOptionPane.showMessageDialog(carSystem, "The format of the date is not valid", "Invalid field", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(carSystem, Languaje.getErrorFormatoFecha(), Languaje.getCampoInvalido(), JOptionPane.ERROR_MESSAGE);
 
 		}
 
@@ -158,16 +157,16 @@ public class AddCarPanel extends JPanel implements ActionListener
 			if (result == CarsCollection.NO_ERROR)
 			{
 				carSystem.setCarsUpdated();
-				JOptionPane.showMessageDialog(carSystem, "Registro agregado.", "Confirmacion", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(carSystem, Languaje.getRegistroAgregado(), Languaje.getConfirmacion(), JOptionPane.INFORMATION_MESSAGE);
 				resetButtonClicked();
 				carComponents.setFocusManufacturerTextField();
 			}
 			// for that manufacturer, the limit has been reached
 			else if (result == CarsCollection.CARS_MAXIMUM_REACHED)
-				JOptionPane.showMessageDialog(carSystem, "La cantidad maxima de autos para ese fabricante fue alcanzado.\nDesafortunadamente no puedes añadir a ningún auto más para este fabricante", "Problema agregando auto", JOptionPane.WARNING_MESSAGE);
+				JOptionPane.showMessageDialog(carSystem, Languaje.getErrorAutos(), Languaje.getTituloProblemaAutos(), JOptionPane.WARNING_MESSAGE);
 			// the car system has reached the maximum number of manufacturers allowed
 			else if (result == CarsCollection.MANUFACTURERS_MAXIMUM_REACHED)
-				JOptionPane.showMessageDialog(carSystem, "La cantidad máxima de fabricantes en el sistema fue alcanzado.\nDesafortunadamente no puedes añadir a ningún fabricante más al sistema", "Problema agregando auto", JOptionPane.WARNING_MESSAGE);
+				JOptionPane.showMessageDialog(carSystem, Languaje.getErrorFabricantes(), Languaje.getTituloProblemaAutos(), JOptionPane.WARNING_MESSAGE);
 		}
 	}
 
